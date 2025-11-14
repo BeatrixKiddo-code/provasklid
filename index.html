@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pro Váš Klid - Služby pro domácnost, zahradu a péči o zvířata v Mělníku a okolí">
+    <title>Pro Váš Klid - Vy nemusíte – já zařídím</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#home" class="logo">
+                    <img src="images/header-logo.png" alt="Pro Váš Klid - Logo">
+                </a>
+                <nav class="nav">
+                    <a href="#home" class="nav-link">Domů</a>
+                    <a href="#sluzby" class="nav-link">Služby</a>
+                    <a href="/cenik.html" class="nav-link">Ceník</a>
+                    <a href="#kontakt" class="nav-link">Kontakt</a>
+                    <a href="/hrbitov.html" class="nav-link">Hřbitov</a>
+                </nav>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-image">
+            <img src="images/hero-provasklid.jfif" alt="Pro Váš Klid - Služby pro domácnost">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Pomoc, která je kdykoli na dosah</h1>
+            <p class="hero-subtitle">Služby pro domácnost, zahradu i vaše nejbližší – s péčí a svědomitostí.</p>
+            <a href="#kontakt" class="cta-button">Poptejte služby</a>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="sluzby" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title section-title--green">Naše služby</h2>
+                <p class="section-subtitle">Vy nemusíte – já zařídím</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 10L35 20H45L37 27L40 37L30 32L20 37L23 27L15 20H25L30 10Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="30" cy="35" r="18" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Péče o domácnost a vyřizování</h3>
+                    <p class="service-description">Pomoc na úřadech, dovoz nákupu, kontrola domácnosti při dovolené,
+                        vyřízení záležitostí a další služby, které vám usnadní každodenní život.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M30 15C30 15 20 20 20 30C20 35 23 38 25 40C27 42 30 45 30 45C30 45 33 42 35 40C37 38 40 35 40 30C40 20 30 15 30 15Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 45C15 45 18 42 22 42C26 42 28 45 30 45C32 45 34 42 38 42C42 42 45 45 45 45"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Zahrada a rostliny</h3>
+                    <p class="service-description">Zalévání zahrady během vaší nepřítomnosti, drobná péče o venkovní
+                        rostliny i pokojové květiny. Vaše rostliny budou v dobrých rukou.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 30C20 30 22 25 25 25C28 25 30 28 30 28C30 28 32 25 35 25C38 25 40 30 40 30"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="25" cy="22" r="2" fill="currentColor" />
+                            <circle cx="35" cy="22" r="2" fill="currentColor" />
+                            <path d="M15 35C15 35 20 32 30 32C40 32 45 35 45 35L40 45H20L15 35Z" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Hlídání a péče o zvířata</h3>
+                    <p class="service-description">Venčení psů, krmení a hlídání koček, kontrola bytu během vaší
+                        absence. Postaráme se o vaše mazlíčky s láskou a odpovědností.</p>
+                </div>
+            </div>
+
+            <p class="services-location">Poskytujeme služby v Mělníku a blízkém okolí</p>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="proces" class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title section-title--nobrush">Jak to probíhá</h2>
+                <p class="section-subtitle">Jednoduchý proces v několika krocích</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Napíšete nebo zavoláte</h3>
+                    <p class="step-description">Vyplníte poptávku nebo nám zavoláte. Popíšete, jakou službu potřebujete,
+                        kde a kdy. Můžete přidat i speciální požadavky.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Domluvíme detaily</h3>
+                    <p class="step-description">Ozveme se vám, upřesníme podrobnosti, domluníme termín a způsob
+                        přístupu. Vše probíhá diskrétně a profesionálně.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Splníme vaše přání</h3>
+                    <p class="step-description">Provedeme službu svědomitě a s péčí. Na přání vám zašleme potvrzení nebo
+                        fotodokumentaci, abyste měli vždy přehled.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section -->
+    <section id="cenik" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ceník služeb</h2>
+                <p class="section-subtitle">Základní přehled orientačních cen</p>
+            </div>
+
+            <div class="pricing-table-wrapper">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Služba</th>
+                            <th>Cena</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nákup a dovoz</td>
+                            <td>od 300 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>Vyřízení na úřadě</td>
+                            <td>450 Kč/úkon</td>
+                        </tr>
+                        <tr>
+                            <td>Kontrola domácnosti</td>
+                            <td>250 Kč/návštěva</td>
+                        </tr>
+                        <tr>
+                            <td>Péče o rostliny</td>
+                            <td>od 200 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>Zalévání zahrady</td>
+                            <td>od 300 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>Venčení psa (30 min)</td>
+                            <td>200 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>Péče o kočku</td>
+                            <td>200 Kč/den</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pricing-notes">
+                <p><strong>Doprava zdarma</strong> v Mělníku • Mimo Mělník +8 Kč/km</p>
+                <p class="pricing-disclaimer">Orientační ceny. Sleva při pravidelné spolupráci.</p>
+            </div>
+
+            <div class="pricing-cta">
+                <a href="cenik.html" class="cta-button secondary">Zobrazit kompletní ceník</a>
+                <a href="#kontakt" class="cta-button">Nezávazně poptat</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title section-title--long">Často kladené otázky</h2>
+                <p class="section-subtitle">Odpovědi na vaše dotazy</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Působíte jen na Mělníku?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ano, poskytujeme služby na Mělníku a blízkém okolí (cca do 10 km). Pro vzdálenější lokality
+                            nás prosím kontaktujte.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Jak se domlouváme na službě?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Můžete nám napsat přes kontaktní formulář nebo zavolat. Společně si upřesníme detaily, termín
+                            a způsob přístupu. Vše se domlouvá individuálně.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Potřebuji být doma při poskytování služby?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ne, nemusíte. Můžete nám předat klíče nebo sdělit kód, případně zařídit jiný způsob vstupu.
+                            Vše je diskrétní a bezpečné.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Nabízíte pravidelné služby nebo jen jednorázové?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nabízíme obojí! Můžete si objednat jednorázovou službu nebo se domluvit na pravidelné péči
+                            (týdenní, měsíční). Ceny jsou pak výhodnější.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Dostanu potvrzení o provedené službě?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ano, na přání vám zašleme SMS, e-mail nebo fotodokumentaci po každé návštěvě. Tak máte vždy
+                            přehled o tom, že vše proběhlo v pořádku.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Co když potřebuji službu urgentně?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Zavolejte nám a my se pokusíme vyhovět. V závislosti na naší vytíženosti dokážeme zajistit i
+                            služby ve zkráceném termínu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Contact Section -->
+<section id="kontakt" class="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title section-title--nobrush">Objednávky a dotazy</h2>
+            <p class="section-subtitle">Vyplňte formulář a my se vám ozveme do 24 hodin</p>
+        </div>
+
+        <form 
+            class="contact-form" 
+            id="contactForm" 
+            action="https://formspree.io/f/xvgdgbrp" 
+            method="POST"
+        >
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Jméno *</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required
+                    >
+                    <span class="error-message">Prosím, vyplňte vaše jméno</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required
+                    >
+                    <span class="error-message">Prosím, zadejte platnou e-mailovou adresu</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefon *</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        required
+                    >
+                    <span class="error-message">Prosím, zadejte platné telefonní číslo</span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="service">Vyberte službu *</label>
+                    <select 
+                        id="service" 
+                        name="service" 
+                        required
+                    >
+                        <option value="">-- Zvolte službu --</option>
+                        <option value="Péče o domácnost a vyřizování">Péče o domácnost a vyřizování</option>
+                        <option value="Zahrada a rostliny">Zahrada a rostliny</option>
+                        <option value="Hlídání a péče o zvířata">Hlídání a péče o zvířata</option>
+                        <option value="Jiná služba">Jiná služba</option>
+                    </select>
+                    <span class="error-message">Prosím, vyberte službu</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Zpráva *</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="4" 
+                        required
+                    ></textarea>
+                    <span class="error-message">Prosím, napište zprávu</span>
+                </div>
+            </div>
+
+            <!-- Honeypot pro spam protection -->
+            <input type="text" name="_gotcha" style="display:none">
+            
+            <!-- Přesměrování po úspěchu (volitelné) -->
+            <!-- <input type="hidden" name="_next" value="https://provasklid.cz/dekujeme.html"> -->
+
+            <div class="form-actions">
+                <button type="submit" class="submit-button">
+                    <span class="button-text">Odeslat poptávku</span>
+                    <span class="button-loader"></span>
+                </button>
+            </div>
+            
+            <div class="form-success" id="formSuccess">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <p>Děkujeme! Vaše poptávka byla odeslána. Ozveme se vám do 24 hodin.</p>
+            </div>
+        </form>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Pro Váš Klid</h3>
+                    <p>Vy nemusíte – já zařídím</p>
+                </div>
+
+                <div class="footer-contact">
+                    <a href="tel:+420000000000">📞 +420 000 000 000</a>
+                    <a href="mailto:info@provasklid.cz">✉️ info@provasklid.cz</a>
+                </div>
+
+                <nav class="footer-nav">
+                    <a href="index.html#home">Domů</a>
+                    <a href="index.html#sluzby">Služby</a>
+                    <a href="cenik.html">Ceník</a>
+                    <a href="index.html#kontakt">Kontakt</a>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pro Váš Klid • Mělník a okolí</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

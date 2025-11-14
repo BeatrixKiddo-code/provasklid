@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kompletní ceník služeb Pro Váš Klid - domácnost, zahrada, zvířata. Transparentní ceny a balíčky se slevou.">
+    <title>Ceník služeb | Pro Váš Klid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="images/header-logo.png" alt="Pro Váš Klid - Logo">
+                </a>
+                <nav class="nav">
+                    <a href="index.html#home" class="nav-link">Domů</a>
+                    <a href="index.html#sluzby" class="nav-link">Služby</a>
+                    <a href="cenik.html" class="nav-link active">Ceník</a>
+                    <a href="index.html#kontakt" class="nav-link">Kontakt</a>
+                    <a href="hrbitov.html" class="nav-link">Hřbitov</a>
+                </nav>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Ceník služeb</h1>
+                <p class="page-subtitle">Transparentní ceny pro všechny služby • Sleva při pravidelné spolupráci</p>
+            </div>
+        </section>
+
+        <!-- Pricing Sections -->
+        <section class="pricing-detailed">
+            <div class="container">
+
+                <!-- DOMÁCNOST A VYŘIZOVÁNÍ -->
+                <div class="pricing-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg width="48" height="48" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30 10L35 20H45L37 27L40 37L30 32L20 37L23 27L15 20H25L30 10Z"
+                                    stroke="currentColor" stroke-width="2" />
+                                <circle cx="30" cy="35" r="18" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="category-title">Domácnost a vyřizování</h2>
+                            <p class="category-desc">Ulehčíme vám starosti s každodenními povinnostmi</p>
+                        </div>
+                    </div>
+
+                    <div class="pricing-table-wrapper">
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th>Služba</th>
+                                    <th>Popis</th>
+                                    <th>Cena</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Nákup a dovoz</strong></td>
+                                    <td>
+                                        <ul class="service-details">
+                                            <li>Základní (do 30 min): potraviny, drogerie</li>
+                                            <li>Standardní (do 60 min): týdenní nákup</li>
+                                            <li>Rozšířený (nad 60 min): velký nákup</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        250 Kč<br>
+                                        350 Kč<br>
+                                        450 Kč
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vyřízení na úřadě</strong></td>
+                                    <td>
+                                        Úřední záležitosti, vyplnění formulářů, předání dokumentů<br>
+                                        <small style="opacity: 0.7;">+ případné poplatky (kolky, správní
+                                            poplatky)</small>
+                                    </td>
+                                    <td>450 Kč/úkon</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Kontrola domácnosti</strong></td>
+                                    <td>
+                                        Kontrola při dovolené, vybírání pošty, větrání, základní úklid
+                                    </td>
+                                    <td>250 Kč/návštěva</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="pricing-package">
+                        <div class="package-badge">💰 Výhodný balíček</div>
+                        <h4>Týdenní balíček "Klid na dovolené"</h4>
+                        <p>7× kontrola domácnosti + zalévání rostlin + vybírání pošty</p>
+                        <div class="package-price">
+                            <span class="old-price">1 750 Kč</span>
+                            <span class="new-price">1 500 Kč</span>
+                            <span class="savings">Ušetříte 250 Kč!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ZAHRADA A ROSTLINY -->
+                <div class="pricing-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg width="48" height="48" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M30 15C30 15 20 20 20 30C20 35 23 38 25 40C27 42 30 45 30 45C30 45 33 42 35 40C37 38 40 35 40 30C40 20 30 15 30 15Z"
+                                    stroke="currentColor" stroke-width="2" />
+                                <path d="M15 45C15 45 18 42 22 42C26 42 28 45 30 45C32 45 34 42 38 42C42 42 45 45 45 45"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="category-title">Zahrada a rostliny</h2>
+                            <p class="category-desc">Vaše rostliny budou v dobrých rukou</p>
+                        </div>
+                    </div>
+
+                    <div class="pricing-table-wrapper">
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th>Služba</th>
+                                    <th>Popis</th>
+                                    <th>Cena</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Pokojové rostliny</strong></td>
+                                    <td>
+                                        <ul class="service-details">
+                                            <li>Do 10 květináčů: zalévání, kontrola</li>
+                                            <li>10-20 květináčů: rozšířená péče</li>
+                                            <li>Každý další: +15 Kč/kus</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        200 Kč<br>
+                                        300 Kč<br>
+                                        +15 Kč
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Zalévání zahrady</strong></td>
+                                    <td>
+                                        <ul class="service-details">
+                                            <li>Malá zahrada (do 100 m²)</li>
+                                            <li>Střední zahrada (100-300 m²)</li>
+                                            <li>Velká zahrada (nad 300 m²)</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        250 Kč<br>
+                                        400 Kč<br>
+                                        od 550 Kč
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Drobná údržba</strong></td>
+                                    <td>Plení, úprava záhonů, sekaní menších ploch</td>
+                                    <td>250 Kč/hod</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ZVÍŘATA -->
+                <div class="pricing-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg width="48" height="48" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 30C20 30 22 25 25 25C28 25 30 28 30 28C30 28 32 25 35 25C38 25 40 30 40 30"
+                                    stroke="currentColor" stroke-width="2" />
+                                <circle cx="25" cy="22" r="2" fill="currentColor" />
+                                <circle cx="35" cy="22" r="2" fill="currentColor" />
+                                <path d="M15 35C15 35 20 32 30 32C40 32 45 35 45 35L40 45H20L15 35Z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="category-title">Péče o zvířata</h2>
+                            <p class="category-desc">S láskou a zodpovědností</p>
+                        </div>
+                    </div>
+
+                    <div class="pricing-table-wrapper">
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th>Služba</th>
+                                    <th>Popis</th>
+                                    <th>Cena</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Venčení psa</strong></td>
+                                    <td>
+                                        <ul class="service-details">
+                                            <li>30 minut: základní procházka</li>
+                                            <li>60 minut: delší procházka</li>
+                                            <li>Pravidelné venčení (5× týdně)</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        200 Kč<br>
+                                        300 Kč<br>
+                                        850 Kč/týden
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Péče o kočku</strong></td>
+                                    <td>
+                                        <ul class="service-details">
+                                            <li>Krmení + kontrola (1× denně)</li>
+                                            <li>Rozšířená péče (2× denně + hraní)</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        200 Kč<br>
+                                        400 Kč
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Obecné poznámky -->
+                <div class="pricing-general-notes">
+                    <h3>Důležité informace</h3>
+                    <div class="notes-grid">
+                        <div class="note-item">
+                            <span class="note-icon">🚗</span>
+                            <div>
+                                <strong>Doprava</strong>
+                                <p>Zdarma v Mělníku<br>Mimo Mělník +8 Kč/km</p>
+                            </div>
+                        </div>
+                        <div class="note-item">
+                            <span class="note-icon">💰</span>
+                            <div>
+                                <strong>Sleva 10%</strong>
+                                <p>Při pravidelné spolupráci<br>(3× týdně a více)</p>
+                            </div>
+                        </div>
+                        <div class="note-item">
+                            <span class="note-icon">📋</span>
+                            <div>
+                                <strong>Individuální kalkulace</strong>
+                                <p>Pro komplexní služby<br>a dlouhodobou spolupráci</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="disclaimer">Všechny ceny jsou orientační a mohou se lišit podle konkrétních požadavků a
+                        rozsahu služeb. Přesnou cenu vám rádi sdělíme po nezávazné konzultaci.</p>
+                </div>
+
+                <!-- CTA -->
+                <div class="pricing-page-cta">
+                    <h3>Máte zájem o naše služby?</h3>
+                    <p>Kontaktujte nás a my vám připravíme nabídku přímo na míru vašim potřebám.</p>
+                    <div class="cta-buttons">
+                        <a href="index.html#kontakt" class="cta-button">Nezávazně poptat</a>
+                        <a href="tel:+420000000000" class="cta-button secondary">Zavolat: +420 000 000 000</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Pro Váš Klid</h3>
+                    <p>Vy nemusíte – já zařídím</p>
+                </div>
+
+                <div class="footer-contact">
+                    <a href="tel:+420000000000">📞 +420 000 000 000</a>
+                    <a href="mailto:info@provasklid.cz">✉️ info@provasklid.cz</a>
+                </div>
+
+                <nav class="footer-nav">
+                    <a href="index.html#home">Domů</a>
+                    <a href="index.html#sluzby">Služby</a>
+                    <a href="cenik.html">Ceník</a>
+                    <a href="index.html#kontakt">Kontakt</a>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pro Váš Klid • Mělník a okolí</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
