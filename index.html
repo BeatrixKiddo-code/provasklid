@@ -12,6 +12,9 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_provasklid32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_provasklid16.png">
+
 </head>
 
 <body>
@@ -283,107 +286,78 @@
         </div>
     </section>
 
-<!-- Contact Section -->
-<section id="kontakt" class="contact">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title section-title--nobrush">Objednávky a dotazy</h2>
-            <p class="section-subtitle">Vyplňte formulář a my se vám ozveme do 24 hodin</p>
+    <!-- Contact Section -->
+    <section id="kontakt" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title section-title--nobrush">Objednávky a dotazy</h2>
+                <p class="section-subtitle">Vyplňte formulář a my se vám ozveme do 24 hodin</p>
+            </div>
+
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvgdgbrp" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Jméno *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message">Prosím, vyplňte vaše jméno</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message">Prosím, zadejte platnou e-mailovou adresu</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefon *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <span class="error-message">Prosím, zadejte platné telefonní číslo</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="service">Vyberte službu *</label>
+                        <select id="service" name="service" required>
+                            <option value="">-- Zvolte službu --</option>
+                            <option value="Péče o domácnost a vyřizování">Péče o domácnost a vyřizování</option>
+                            <option value="Zahrada a rostliny">Zahrada a rostliny</option>
+                            <option value="Hlídání a péče o zvířata">Hlídání a péče o zvířata</option>
+                            <option value="Jiná služba">Jiná služba</option>
+                        </select>
+                        <span class="error-message">Prosím, vyberte službu</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Zpráva *</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <span class="error-message">Prosím, napište zprávu</span>
+                    </div>
+                </div>
+
+                <!-- Honeypot pro spam protection -->
+                <input type="text" name="_gotcha" style="display:none">
+
+                <!-- Přesměrování po úspěchu (volitelné) -->
+                <!-- <input type="hidden" name="_next" value="https://provasklid.cz/dekujeme.html"> -->
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-button">
+                        <span class="button-text">Odeslat poptávku</span>
+                        <span class="button-loader"></span>
+                    </button>
+                </div>
+
+                <div class="form-success" id="formSuccess">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <p>Děkujeme! Vaše poptávka byla odeslána. Ozveme se vám do 24 hodin.</p>
+                </div>
+            </form>
         </div>
-
-        <form 
-            class="contact-form" 
-            id="contactForm" 
-            action="https://formspree.io/f/xvgdgbrp" 
-            method="POST"
-        >
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="name">Jméno *</label>
-                    <input 
-                        type="text" 
-                        id="name" 
-                        name="name" 
-                        required
-                    >
-                    <span class="error-message">Prosím, vyplňte vaše jméno</span>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">E-mail *</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        required
-                    >
-                    <span class="error-message">Prosím, zadejte platnou e-mailovou adresu</span>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Telefon *</label>
-                    <input 
-                        type="tel" 
-                        id="phone" 
-                        name="phone" 
-                        required
-                    >
-                    <span class="error-message">Prosím, zadejte platné telefonní číslo</span>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="service">Vyberte službu *</label>
-                    <select 
-                        id="service" 
-                        name="service" 
-                        required
-                    >
-                        <option value="">-- Zvolte službu --</option>
-                        <option value="Péče o domácnost a vyřizování">Péče o domácnost a vyřizování</option>
-                        <option value="Zahrada a rostliny">Zahrada a rostliny</option>
-                        <option value="Hlídání a péče o zvířata">Hlídání a péče o zvířata</option>
-                        <option value="Jiná služba">Jiná služba</option>
-                    </select>
-                    <span class="error-message">Prosím, vyberte službu</span>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Zpráva *</label>
-                    <textarea 
-                        id="message" 
-                        name="message" 
-                        rows="4" 
-                        required
-                    ></textarea>
-                    <span class="error-message">Prosím, napište zprávu</span>
-                </div>
-            </div>
-
-            <!-- Honeypot pro spam protection -->
-            <input type="text" name="_gotcha" style="display:none">
-            
-            <!-- Přesměrování po úspěchu (volitelné) -->
-            <!-- <input type="hidden" name="_next" value="https://provasklid.cz/dekujeme.html"> -->
-
-            <div class="form-actions">
-                <button type="submit" class="submit-button">
-                    <span class="button-text">Odeslat poptávku</span>
-                    <span class="button-loader"></span>
-                </button>
-            </div>
-            
-            <div class="form-success" id="formSuccess">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-                <p>Děkujeme! Vaše poptávka byla odeslána. Ozveme se vám do 24 hodin.</p>
-            </div>
-        </form>
-    </div>
-</section>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -395,7 +369,7 @@
                 </div>
 
                 <div class="footer-contact">
-                    <a href="tel:+420000000000">📞 +420 000 000 000</a>
+                    <a href="tel:+420000000000">📞 +420 736 231 196</a>
                     <a href="mailto:info@provasklid.cz">✉️ info@provasklid.cz</a>
                 </div>
 
