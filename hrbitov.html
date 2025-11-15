@@ -612,6 +612,87 @@
             .pricing-grid {
                 grid-template-columns: 1fr;
             }
+
+            .nav-toggle {
+                display: none;
+                flex-direction: column;
+                gap: 5px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 8px;
+                z-index: 1001;
+            }
+
+            .nav-toggle span {
+                width: 25px;
+                height: 2px;
+                background-color: var(--color-green);
+                transition: all 0.3s ease;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .header-content {
+                justify-content: space-between;
+            }
+
+            /* Skryj navigace */
+            .nav-left,
+            .nav-right {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background-color: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                padding: var(--spacing-lg);
+                gap: var(--spacing-md);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+            }
+
+            /* Sloučí obě navigace do jedné na mobilu */
+            .nav-right {
+                top: 260px;
+                /* Pod první navigací */
+            }
+
+            .nav-left.active,
+            .nav-right.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            /* Zobraz hamburger */
+            .nav-toggle {
+                display: flex;
+                order: 3;
+            }
+
+            /* Logo do středu */
+            .logo {
+                order: 2;
+            }
+
+            /* Animace hamburgeru */
+            .nav-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(7px, 7px);
+            }
+
+            .nav-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .nav-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
         }
 
         /* ===== Process Section ===== */
@@ -872,31 +953,66 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
-        /* ===== Responsive Design ===== */
-        @media (max-width: 768px) {
-            .nav {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                right: 0;
-                flex-direction: column;
-                background-color: rgba(255, 255, 255, 0.98);
-                padding: var(--spacing-lg);
-                gap: var(--spacing-md);
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.3s ease;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        /* ===== Mobile Navigation ===== */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+
+        .nav-toggle span {
+            width: 25px;
+            height: 2px;
+            background-color: var(--color-green);
+            transition: all 0.3s ease;
+        }
+
+        /* Mobilní menu wrapper */
+        .mobile-menu-wrapper {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: var(--spacing-lg);
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .mobile-menu-wrapper.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media (max-width: 968px) {
+
+            /* Skryj desktop navigace */
+            .nav-left,
+            .nav-right {
+                display: none;
             }
 
-            .nav.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-
+            /* Zobraz hamburger */
             .nav-toggle {
+                display: flex;
+            }
+
+            /* Zobraz mobilní menu */
+            .mobile-menu-wrapper {
                 display: flex;
             }
 
@@ -911,6 +1027,28 @@
             .nav-toggle.active span:nth-child(3) {
                 transform: rotate(-45deg) translate(7px, -7px);
             }
+        }
+
+        @media (min-width: 969px) {
+            .mobile-menu-wrapper {
+                display: none !important;
+            }
+        }
+
+        /* ===== Responsive Design ===== */
+        @media (max-width: 768px) {
+            .hero-image img {
+                transform: translateZ(0);
+                will-change: transform;
+            }
+
+            .hero.parallax .hero-image img {
+                transform: translateY(var(--parallax-offset, 0));
+            }
+
+            .logo img {
+                height: 60px;
+            }
 
             .hero {
                 min-height: 100vh;
@@ -922,23 +1060,6 @@
             }
         }
 
-        @media (max-width: 768px) {
-
-            .nav-left,
-            .nav-right {
-                display: none;
-            }
-
-            .nav-toggle {
-                display: block;
-                margin-left: auto;
-            }
-
-            .logo img {
-                height: 60px;
-            }
-        }
-
         @media (max-width: 480px) {
             .hero {
                 min-height: calc(100vh - 60px);
@@ -946,17 +1067,6 @@
 
             .hero-image img {
                 object-position: center top;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .hero-image img {
-                transform: translateZ(0);
-                will-change: transform;
-            }
-
-            .hero.parallax .hero-image img {
-                transform: translateY(var(--parallax-offset, 0));
             }
         }
     </style>
@@ -989,6 +1099,12 @@
                 </button>
 
             </div>
+        </div>
+        <div class="mobile-menu-wrapper">
+            <a href="#home" class="nav-link">Domů</a>
+            <a href="#cenik" class="nav-link">Ceník</a>
+            <a href="/index.html" class="nav-link">Další služby</a>
+            <a href="#kontakt" class="nav-link">Kontakt</a>
         </div>
     </header>
 
@@ -1313,24 +1429,24 @@
     <script>
         // ===== Mobile Navigation Toggle =====
         const navToggle = document.querySelector('.nav-toggle');
-        const nav = document.querySelector('.nav');
-        const navLinks = document.querySelectorAll('.nav-link');
+        const mobileMenu = document.querySelector('.mobile-menu-wrapper');
+        const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('.nav-link') : [];
 
-        if (navToggle) {
+        if (navToggle && mobileMenu) {
             navToggle.addEventListener('click', () => {
                 navToggle.classList.toggle('active');
-                nav.classList.toggle('active');
-                document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+                mobileMenu.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
             });
         }
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navToggle.classList.remove('active');
-                nav.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
         // ===== Hero Parallax Effect (volitelné) =====
         const hero = document.querySelector('.hero');
         const heroImage = document.querySelector('.hero-image img');
