@@ -54,6 +54,14 @@ body {
     overflow-x: hidden;
 }
 
+/* Fix for browser warning: h1 inside sectioning elements */
+section h1,
+article h1,
+aside h1,
+nav h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
 .container {
     width: min(100% - 2rem, 1200px);
     margin: 0 auto;
