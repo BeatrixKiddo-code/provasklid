@@ -9,9 +9,15 @@
     <title>Pro Váš Klid - Vy nemusíte – já zařídím</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap&display=swap"
-        rel="stylesheet">
+
+    <!-- Async font loading -->
+    <link rel="preload" as="style"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    </noscript>
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_provasklid32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_provasklid16.png">
