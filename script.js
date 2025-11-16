@@ -63,15 +63,18 @@ faqQuestions.forEach(question => {
     question.addEventListener('click', () => {
         const faqItem = question.closest('.faq-item');
         const isActive = faqItem.classList.contains('active');
-        
+
         // Zavřít všechny ostatní FAQ
         document.querySelectorAll('.faq-item').forEach(item => {
             item.classList.remove('active');
+            const btn = item.querySelector('.faq-question');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
         });
-        
+
         // Otevřít aktuální, pokud nebyl aktivní
         if (!isActive) {
             faqItem.classList.add('active');
+            question.setAttribute('aria-expanded', 'true');
         }
     });
 });
