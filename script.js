@@ -211,7 +211,7 @@ contactForm.addEventListener('submit', async (e) => {
         }
         
     } catch (error) {
-        alert('Omlouváme se, došlo k chybě při odesílání formuláře. Zkuste to prosím znovu nebo nás kontaktujte telefonicky na +420 000 000 000.');
+        alert('Omlouváme se, došlo k chybě při odesílání formuláře. Zkuste to prosím znovu nebo nás kontaktujte telefonicky na +420 736 231 196.');
         console.error('Form submission error:', error);
     } finally {
         submitButton.disabled = false;

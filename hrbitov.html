@@ -1350,7 +1350,7 @@
                     <p class="section-subtitle">Rádi vám připravíme nabídku na míru</p>
                 </div>
 
-                <form class="contact-form" id="contactForm" novalidate>
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvgdgbrp" method="POST" novalidate>
                     <div class="form-group">
                         <label for="name">Jméno *</label>
                         <input type="text" id="name" name="name" required>
@@ -1517,7 +1517,7 @@
             });
         });
 
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             let isValid = true;
@@ -1529,21 +1529,39 @@
 
             if (isValid) {
                 const submitButton = contactForm.querySelector('.submit-button');
+                const originalText = submitButton.textContent;
                 submitButton.textContent = 'Odesílám...';
                 submitButton.disabled = true;
 
-                setTimeout(() => {
-                    formSuccess.classList.add('show');
-                    contactForm.reset();
-                    submitButton.textContent = 'Odeslat poptávku';
+                try {
+                    const formData = new FormData(contactForm);
+                    const response = await fetch('https://formspree.io/f/xvgdgbrp', {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                        formSuccess.classList.add('show');
+                        contactForm.reset();
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+
+                        setTimeout(() => {
+                            formSuccess.classList.remove('show');
+                        }, 5000);
+
+                        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    } else {
+                        alert('Něco se pokazilo. Zkuste to prosím znovu nebo nás kontaktujte telefonicky.');
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                    }
+                } catch (error) {
+                    alert('Chyba při odesílání formuláře. Zkontrolujte připojení k internetu.');
+                    submitButton.textContent = originalText;
                     submitButton.disabled = false;
-
-                    setTimeout(() => {
-                        formSuccess.classList.remove('show');
-                    }, 5000);
-
-                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }, 1500);
+                }
             } else {
                 const firstError = contactForm.querySelector('.form-group.error');
                 if (firstError) {
