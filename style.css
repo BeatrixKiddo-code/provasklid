@@ -264,7 +264,7 @@ nav h1 {
 }
 
 .cta-button.secondary {
-    color: #7B6660;
+    color: var(--color-white);
 }
 
 .cta-button:hover {
@@ -1263,6 +1263,7 @@ nav h1 {
 .cta-button.secondary {
     background-color: transparent;
     border: 2px solid var(--color-white);
+    color: var(--color-white);
 }
 
 .cta-button.secondary:hover {
