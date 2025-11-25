@@ -264,7 +264,17 @@ nav h1 {
 }
 
 .cta-button.secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-olive);
+    color: var(--color-olive);
+    box-shadow: none;
+}
+
+.cta-button.secondary:hover {
+    background-color: var(--color-olive);
     color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(94, 91, 61, 0.4);
 }
 
 .cta-button:hover {
@@ -1260,13 +1270,13 @@ nav h1 {
     flex-wrap: wrap;
 }
 
-.cta-button.secondary {
+.pricing-page-cta .cta-button.secondary {
     background-color: transparent;
     border: 2px solid var(--color-white);
     color: var(--color-white);
 }
 
-.cta-button.secondary:hover {
+.pricing-page-cta .cta-button.secondary:hover {
     background-color: var(--color-white);
     color: var(--color-olive);
 }
