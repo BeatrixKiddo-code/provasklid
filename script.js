@@ -1,4 +1,4 @@
-// ===== Mobile Navigation Toggle =====
+// Mobile Navigation Toggle
 const navToggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.nav');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -21,7 +21,7 @@ navLinks.forEach(link => {
     });
 });
 
-// ===== Smooth Scrolling =====
+// Smooth Scrolling 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -40,7 +40,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== Header Scroll Effect =====
+//Header Scroll Effect 
 const header = document.querySelector('.header');
 let lastScroll = 0;
 
@@ -56,7 +56,7 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// ===== FAQ Accordion =====
+// FAQ Accordion
 const faqQuestions = document.querySelectorAll('.faq-question');
 
 faqQuestions.forEach(question => {
@@ -64,14 +64,12 @@ faqQuestions.forEach(question => {
         const faqItem = question.closest('.faq-item');
         const isActive = faqItem.classList.contains('active');
 
-        // Zavřít všechny ostatní FAQ
         document.querySelectorAll('.faq-item').forEach(item => {
             item.classList.remove('active');
             const btn = item.querySelector('.faq-question');
             if (btn) btn.setAttribute('aria-expanded', 'false');
         });
 
-        // Otevřít aktuální, pokud nebyl aktivní
         if (!isActive) {
             faqItem.classList.add('active');
             question.setAttribute('aria-expanded', 'true');
@@ -79,7 +77,7 @@ faqQuestions.forEach(question => {
     });
 });
 
-// ===== Formspree Contact Form =====
+//Formspree Contact Form
 const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 const submitButton = contactForm.querySelector('.submit-button');
@@ -163,7 +161,6 @@ formFields.forEach(field => {
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    // Validate all fields
     let isValid = true;
     formFields.forEach(field => {
         if (!validateField(field)) {
@@ -179,7 +176,6 @@ contactForm.addEventListener('submit', async (e) => {
         return;
     }
     
-    // Show loading state
     submitButton.disabled = true;
     submitButton.classList.add('loading');
     
@@ -195,16 +191,13 @@ contactForm.addEventListener('submit', async (e) => {
         });
         
         if (response.ok) {
-            // Success!
             formSuccess.classList.add('show');
             contactForm.reset();
             
-            // Hide success after 8 seconds
             setTimeout(() => {
                 formSuccess.classList.remove('show');
             }, 8000);
             
-            // Scroll to success message
             formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } else {
             throw new Error('Formspree error');
@@ -219,7 +212,6 @@ contactForm.addEventListener('submit', async (e) => {
     }
 });
 
-// ===== Scroll Animations =====
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -240,6 +232,5 @@ document.querySelectorAll('.service-card, .process-step, .faq-item').forEach(ele
     element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(element);
 });
-// ===== Console Info =====
 console.log('%cPro Váš Klid', 'font-size: 20px; color: #5E5B3D; font-weight: bold;');
 console.log('%cVy nemusíte – já zařídím.', 'font-size: 14px; color: #686551; font-style: italic;');

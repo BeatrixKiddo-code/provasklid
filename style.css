@@ -1,4 +1,3 @@
-/* ===== CSS Reset & Base ===== */
 * {
     margin: 0;
     padding: 0;
@@ -19,11 +18,9 @@
     --brush-height: 110px;
 
 
-    /* Fonts */
     --font-serif: 'Cormorant Garamond', serif;
     --font-sans: 'Inter', sans-serif;
 
-    /* Spacing */
     --spacing-xs: clamp(0.5rem, 1vw, 0.75rem);
     --spacing-sm: clamp(0.75rem, 1.5vw, 1rem);
     --spacing-md: clamp(1rem, 2vw, 1.5rem);
@@ -31,7 +28,6 @@
     --spacing-xl: clamp(2rem, 4vw, 3.5rem);
     --spacing-2xl: clamp(3rem, 6vw, 5rem);
 
-    /* Typography */
     --text-xs: clamp(0.75rem, 1.5vw, 0.875rem);
     --text-sm: clamp(0.875rem, 1.8vw, 1rem);
     --text-base: clamp(1rem, 2vw, 1.125rem);
@@ -54,7 +50,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Fix for browser warning: h1 inside sectioning elements */
 section h1,
 article h1,
 aside h1,
@@ -68,7 +63,6 @@ nav h1 {
     padding: 0 var(--spacing-md);
 }
 
-/* ===== Header ===== */
 .header {
     position: fixed;
     top: 0;
@@ -176,7 +170,6 @@ nav h1 {
     transition: all 0.3s ease;
 }
 
-/* ===== Hero Section ===== */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -283,7 +276,6 @@ nav h1 {
     box-shadow: 0 12px 35px rgba(94, 91, 61, 0.6);
 }
 
-/* Scroll indicator */
 .scroll-indicator {
     position: absolute;
     bottom: var(--spacing-xl);
@@ -321,7 +313,6 @@ nav h1 {
     }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .hero {
         padding-top: 70px;
@@ -334,7 +325,6 @@ nav h1 {
     }
 }
 
-/* Bounce animace */
 @keyframes bounce {
 
     0%,
@@ -354,7 +344,6 @@ nav h1 {
     }
 }
 
-/* ===== Section Styles ===== */
 .section-header {
     text-align: center;
     margin-bottom: var(--spacing-2xl);
@@ -442,7 +431,6 @@ nav h1 {
     font-style: italic;
 }
 
-/* ===== Services Section ===== */
 .services {
     padding: var(--spacing-2xl) 0;
     background-color: var(--color-white);
@@ -506,7 +494,6 @@ nav h1 {
     margin-top: var(--spacing-lg);
 }
 
-/* ===== Process Section ===== */
 .process {
     padding: var(--spacing-2xl) 0;
     background-color: var(--color-light-beige);
@@ -565,7 +552,6 @@ nav h1 {
     line-height: 1.7;
 }
 
-/* ===== Pricing Section ===== */
 .pricing {
     padding: var(--spacing-2xl) 0;
     background-color: var(--color-ivory);
@@ -575,7 +561,6 @@ nav h1 {
     display: grid;
     gap: var(--spacing-lg);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* default desktop */
 }
 
 .pricing-section-title {
@@ -672,7 +657,6 @@ nav h1 {
     background-color: rgba(230, 224, 210, 0.3);
 }
 
-/* ===== FAQ Section ===== */
 .faq {
     padding: var(--spacing-2xl) 0;
     background-color: var(--color-white);
@@ -749,7 +733,6 @@ nav h1 {
     line-height: 1.7;
 }
 
-/* ===== Contact Section ===== */
 .contact {
     padding: var(--spacing-2xl) 0;
     background-color: var(--color-light-beige);
@@ -757,7 +740,6 @@ nav h1 {
 
 .contact-form {
     max-width: 900px;
-    /* Širší */
     margin: 0 auto var(--spacing-xl);
     background-color: var(--color-white);
     padding: var(--spacing-xl);
@@ -765,7 +747,6 @@ nav h1 {
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* Form rows - 3 sloupce na desktop */
 .form-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -773,14 +754,12 @@ nav h1 {
     margin-bottom: var(--spacing-lg);
 }
 
-/* Message a Service zabírají 2/3 */
 .form-row:last-of-type {
     grid-template-columns: 1fr 2fr;
 }
 
 .form-group {
     margin-bottom: 0;
-    /* Odstraň, protože máme gap */
 }
 
 .form-group label {
@@ -835,7 +814,6 @@ nav h1 {
     display: block;
 }
 
-/* Submit button */
 .form-actions {
     text-align: center;
     margin-top: var(--spacing-lg);
@@ -898,7 +876,6 @@ nav h1 {
     }
 }
 
-/* Success message */
 .form-success {
     display: none;
     margin-top: var(--spacing-lg);
@@ -941,18 +918,15 @@ nav h1 {
 }
 
 
-/* ===== Footer ===== */
 .footer {
     background-color: var(--color-ivory);
     color: var(--color-olive);
     padding: var(--spacing-xl) 0 var(--spacing-md);
-    /* Menší padding */
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: 1fr auto auto;
-    /* 3 sloupce */
     align-items: center;
     gap: var(--spacing-lg);
     padding-bottom: var(--spacing-md);
@@ -962,7 +936,6 @@ nav h1 {
 .footer-brand h3 {
     font-family: var(--font-serif);
     font-size: var(--text-lg);
-    /* Menší */
     font-weight: 400;
     margin-bottom: 4px;
     color: var(--color-olive);
@@ -970,12 +943,10 @@ nav h1 {
 
 .footer-brand p {
     font-size: var(--text-xs);
-    /* Menší */
     font-style: italic;
     color: var(--color-khaki);
 }
 
-/* Nová sekce - kontakty */
 .footer-contact {
     display: flex;
     flex-direction: column;
@@ -1012,7 +983,6 @@ nav h1 {
 .footer-bottom {
     text-align: center;
     padding-top: var(--spacing-sm);
-    /* Menší */
 }
 
 .footer-bottom p {
@@ -1020,7 +990,6 @@ nav h1 {
     color: var(--color-khaki);
 }
 
-/* ===== Utility Classes ===== */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -1033,7 +1002,6 @@ nav h1 {
     border-width: 0;
 }
 
-/* ===== Page Hero (pro podstránky) ===== */
 .page-hero {
     padding: calc(80px + var(--spacing-2xl)) 0 var(--spacing-2xl);
     background: linear-gradient(135deg, var(--color-light-beige) 0%, var(--color-ivory) 100%);
@@ -1054,7 +1022,6 @@ nav h1 {
     font-weight: 300;
 }
 
-/* ===== Detailed Pricing ===== */
 .pricing-detailed {
     padding: var(--spacing-2xl) 0;
     background-color: var(--color-white);
@@ -1099,7 +1066,6 @@ nav h1 {
     color: var(--color-khaki);
 }
 
-/* Service details list */
 .service-details {
     list-style: none;
     padding: 0;
@@ -1121,7 +1087,6 @@ nav h1 {
     color: var(--color-gold);
 }
 
-/* Pricing packages */
 .pricing-package {
     margin-top: var(--spacing-lg);
     padding: var(--spacing-lg);
@@ -1183,7 +1148,6 @@ nav h1 {
     font-weight: 600;
 }
 
-/* General notes */
 .pricing-general-notes {
     margin-top: var(--spacing-2xl);
     padding: var(--spacing-xl);
@@ -1241,7 +1205,6 @@ nav h1 {
     line-height: 1.7;
 }
 
-/* Page CTA */
 .pricing-page-cta {
     text-align: center;
     margin-top: var(--spacing-2xl);
@@ -1291,7 +1254,6 @@ nav h1 {
     width: 100%;
 }
 
-/* ===== Responsive Design ===== */
 @media (max-width: 968px) {
     .form-row {
         grid-template-columns: 1fr 1fr;
@@ -1403,12 +1365,10 @@ nav h1 {
         white-space: nowrap;
     }
 
-    /* FAQ - větší touch area pro mobil */
     .faq-question {
         padding: var(--spacing-md);
     }
 
-    /* Kategorie ceníku (pro cenik.html) */
     .category-header {
         flex-direction: column;
         text-align: center;

@@ -1439,7 +1439,6 @@
     </footer>
 
     <script>
-        // ===== Mobile Navigation Toggle =====
         const navToggle = document.querySelector('.nav-toggle');
         const mobileMenu = document.querySelector('.mobile-menu-wrapper');
         const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('.nav-link') : [];
@@ -1459,21 +1458,19 @@
                 });
             });
         }
-        // ===== Hero Parallax Effect (volitelné) =====
         const hero = document.querySelector('.hero');
         const heroImage = document.querySelector('.hero-image img');
 
         if (hero && heroImage && window.innerWidth > 768) {
             window.addEventListener('scroll', () => {
                 const scrolled = window.pageYOffset;
-                const rate = scrolled * 0.5; // Rychlost parallaxu
+                const rate = scrolled * 0.5; 
 
                 if (scrolled < hero.offsetHeight) {
                     heroImage.style.transform = `translateY(${rate}px)`;
                 }
             });
         }
-        // ===== Smooth Scrolling =====
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1492,7 +1489,6 @@
             });
         });
 
-        // ===== Form Validation =====
         const contactForm = document.getElementById('contactForm');
         const formSuccess = document.getElementById('formSuccess');
 
@@ -1582,7 +1578,6 @@
             }
         });
 
-        // ===== Scroll Animations =====
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1603,7 +1598,6 @@
             element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(element);
         });
-        // ===== Pricing Frequency Selector =====
         const frequencyDetails = {
             'annual-4': {
                 info: '4× ročně: Jaro, Léto, Dušičky, Vánoce',
@@ -1619,7 +1613,6 @@
             }
         };
 
-        // Update price and info when frequency changes
         document.querySelectorAll('.frequency-select').forEach(select => {
             select.addEventListener('change', function () {
                 const card = this.closest('.pricing-card');
@@ -1632,14 +1625,12 @@
                 const frequencyKey = selectedOption.value;
                 const details = frequencyDetails[frequencyKey];
 
-                // Animate price change
                 priceElement.style.transform = 'scale(1.1)';
                 setTimeout(() => {
                     priceElement.textContent = price + ' Kč';
                     priceElement.style.transform = 'scale(1)';
                 }, 150);
 
-                // Update period text
                 if (frequencyKey === 'once') {
                     periodElement.textContent = 'jednorázově';
                 } else if (frequencyKey === 'annual-4') {
@@ -1648,7 +1639,6 @@
                     periodElement.textContent = 'ročně (2 návštěvy)';
                 }
 
-                // Update info
                 if (details.info) {
                     infoElement.textContent = details.info;
                     if (details.savings) {
@@ -1662,17 +1652,14 @@
             });
         });
 
-        // Function to select package and scroll to contact form
         function selectPackage(packageName, frequencySelectId) {
             const frequencySelect = document.getElementById(frequencySelectId);
             const selectedOption = frequencySelect.options[frequencySelect.selectedIndex];
             const frequencyText = selectedOption.textContent;
 
-            // Populate the form field
             const packageField = document.getElementById('selected-package');
             packageField.value = `${packageName} – ${frequencyText}`;
 
-            // Add visual feedback
             packageField.style.backgroundColor = 'rgba(196, 166, 97, 0.1)';
             packageField.style.borderColor = 'var(--color-gold)';
 
@@ -1681,7 +1668,6 @@
                 packageField.style.borderColor = '';
             }, 2000);
 
-            // Smooth scroll to contact form
             const contactSection = document.getElementById('kontakt');
             const headerOffset = 80;
             const elementPosition = contactSection.getBoundingClientRect().top;
