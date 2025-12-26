@@ -757,7 +757,114 @@
             line-height: 1.7;
         }
 
+        /* ===== Gallery Section ===== */
+        .gallery {
+            background-color: var(--color-white);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: var(--color-white);
+            padding: var(--spacing-md);
+            font-size: var(--text-sm);
+            font-weight: 500;
+            text-align: center;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 40px;
+            color: var(--color-white);
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            transform: scale(1.2);
+        }
+
         /* ===== Testimonials Section ===== */
+        .testimonials {
+            background-color: var(--color-light-gray);
+        }
 
         .testimonials-grid {
             display: grid;
@@ -1318,6 +1425,24 @@
             </div>
         </section>
 
+        <!-- Gallery Section -->
+        <section id="galerie" class="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Naše práce</h2>
+                    <p class="section-subtitle">Fotky před a po&nbsp;&ndash; výsledky, na&nbsp;které jsme hrdí</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox('images/IMG_0541.png')">
+                        <img src="images/IMG_0541.png" alt="Údržba hrobu - před a po">
+                        <div class="gallery-label">Před / Po</div>
+                    </div>
+                    <!-- Zde můžete časem přidat další fotky stejnou strukturou -->
+                </div>
+            </div>
+        </section>
+
         <!-- Testimonials Section -->
         <section id="reference" class="testimonials">
             <div class="container">
@@ -1437,6 +1562,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="Zvětšený náhled">
+        </div>
+    </div>
 
     <script>
         const navToggle = document.querySelector('.nav-toggle');
@@ -1678,6 +1811,28 @@
                 behavior: 'smooth'
             });
         }
+
+        // Lightbox functions
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imageSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
     </script>
 </body>
 

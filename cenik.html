@@ -4,14 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Kompletní ceník služeb Pro Váš Klid - domácnost, zahrada, zvířata. Transparentní ceny a balíčky se slevou.">
-    <title>Ceník služeb | Pro Váš Klid</title>
+    <meta name="description" content="Kompletní ceník služeb Pro Váš Klid - domácnost, zahrada, zvířata. Transparentní ceny a balíčky se slevou v Mělníku a okolí.">
+    <title>Ceník služeb | Pro Váš Klid – Mělník</title>
+    
+    <meta property="og:title" content="Ceník služeb | Pro Váš Klid – Mělník">
+    <meta property="og:description" content="Kompletní ceník služeb pro domácnost, zahradu a péči o zvířata. Transparentní ceny a slevy při pravidelné spolupráci.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://provasklid.cz/cenik.html">
+    <meta property="og:image" content="https://provasklid.cz/images/og-image.jpg">
+    <meta property="og:locale" content="cs_CZ">
+    <meta property="og:site_name" content="Pro Váš Klid">
+    
+    <link rel="canonical" href="https://provasklid.cz/cenik.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_provasklid32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_provasklid16.png">
@@ -21,10 +28,48 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-KNCSPQD18R');
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Pro Váš klid",
+      "image": "https://provasklid.cz/images/header-logo.png",
+      "telephone": "+420736231196",
+      "email": "info@provasklid.cz",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mělník",
+        "postalCode": "27601",
+        "addressCountry": "CZ"
+      },
+      "url": "https://provasklid.cz",
+      "priceRange": "200 Kč - 550 Kč"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Domů",
+          "item": "https://provasklid.cz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Ceník služeb",
+          "item": "https://provasklid.cz/cenik.html"
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -32,16 +77,17 @@
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
-                    <img src="images/header-logo.png" alt="Pro Váš Klid - Logo">
+                    <img src="images/header-logo.png" alt="Pro Váš Klid - služby pro domácnost Mělník" width="729" height="342">
                 </a>
-                <nav class="nav">
-                    <a href="index.html#home" class="nav-link">Domů</a>
-                    <a href="index.html#sluzby" class="nav-link">Služby</a>
-                    <a href="cenik.html" class="nav-link active">Ceník</a>
-                    <a href="index.html#kontakt" class="nav-link">Kontakt</a>
-                    <a href="hrbitov.html" class="nav-link">Hřbitov</a>
+                <nav class="nav" id="mainNav" aria-label="Hlavní navigace">
+                    <a href="index.html" class="nav-link back-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                        Zpět na domovskou stránku
+                    </a>
                 </nav>
-                <button class="nav-toggle" aria-label="Toggle navigation">
+                <button class="nav-toggle" id="navToggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="mainNav">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -54,248 +100,219 @@
         <section class="page-hero">
             <div class="container">
                 <h1 class="page-title">Ceník služeb</h1>
-                <p class="page-subtitle">Transparentní ceny pro všechny služby • Sleva při pravidelné spolupráci</p>
+                <p class="page-subtitle">Transparentní ceny • Sleva 10% při pravidelné spolupráci</p>
             </div>
         </section>
 
-        <section class="pricing-detailed">
+        <section class="pricing-section">
             <div class="container">
 
-                <div class="pricing-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <svg width="48" height="48" viewBox="0 0 60 60" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M30 10L35 20H45L37 27L40 37L30 32L20 37L23 27L15 20H25L30 10Z"
-                                    stroke="currentColor" stroke-width="2" />
-                                <circle cx="30" cy="35" r="18" stroke="currentColor" stroke-width="2" />
-                            </svg>
+                <div class="pricing-grid">
+
+                    <div class="pricing-card">
+                        <div class="pricing-card-header">
+                            <div class="pricing-icon">
+                                <img src="images/domacnost.png" alt="Péče o domácnost" loading="lazy">
+                            </div>
+                            <div>
+                                <h2 class="pricing-card-title">Domácnost</h2>
+                                <p class="pricing-card-subtitle">Pochůzky a vyřizování</p>
+                            </div>
                         </div>
-                        <div>
-                            <h2 class="category-title">Domácnost a vyřizování</h2>
-                            <p class="category-desc">Ulehčíme vám starosti s každodenními povinnostmi</p>
+                        <div class="pricing-items">
+                            <div class="pricing-item">
+                                <div>
+                                    <div class="pricing-item-name">Nákup a dovoz</div>
+                                    <div class="pricing-item-desc">základní do 30 min</div>
+                                </div>
+                                <div class="pricing-item-price">250 Kč</div>
+                            </div>
+                            <div class="pricing-item">
+                                <div>
+                                    <div class="pricing-item-name">Nákup a dovoz</div>
+                                    <div class="pricing-item-desc">standardní do 60 min</div>
+                                </div>
+                                <div class="pricing-item-price">350 Kč</div>
+                            </div>
+                            <div class="pricing-item">
+                                <div>
+                                    <div class="pricing-item-name">Nákup a dovoz</div>
+                                    <div class="pricing-item-desc">rozšířený nad 60 min</div>
+                                </div>
+                                <div class="pricing-item-price">450 Kč</div>
+                            </div>
+                            <div class="pricing-item">
+                                <div>
+                                    <div class="pricing-item-name">Vyřízení na úřadě</div>
+                                    <div class="pricing-item-desc">+ případné poplatky</div>
+                                </div>
+                                <div class="pricing-item-price">450 Kč</div>
+                            </div>
+                            <div class="pricing-item">
+                                <div>
+                                    <div class="pricing-item-name">Kontrola domácnosti</div>
+                                    <div class="pricing-item-desc">pošta, větrání, kontrola</div>
+                                </div>
+                                <div class="pricing-item-price">250 Kč</div>
+                            </div>
+                        </div>
+                        <div class="pricing-card-cta">
+                            <a href="index.html#kontakt" class="cta-button small">Objednat</a>
                         </div>
                     </div>
 
-                    <div class="pricing-table-wrapper">
-                        <table class="pricing-table">
-                            <thead>
-                                <tr>
-                                    <th>Služba</th>
-                                    <th>Popis</th>
-                                    <th>Cena</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Nákup a dovoz</strong></td>
-                                    <td>
-                                        <ul class="service-details">
-                                            <li>Základní (do 30 min): potraviny, drogerie</li>
-                                            <li>Standardní (do 60 min): týdenní nákup</li>
-                                            <li>Rozšířený (nad 60 min): velký nákup</li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        250 Kč<br>
-                                        350 Kč<br>
-                                        450 Kč
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Vyřízení na úřadě</strong></td>
-                                    <td>
-                                        Úřední záležitosti, vyplnění formulářů, předání dokumentů<br>
-                                        <small style="opacity: 0.7;">+ případné poplatky (kolky, správní
-                                            poplatky)</small>
-                                    </td>
-                                    <td>450 Kč/úkon</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Kontrola domácnosti</strong></td>
-                                    <td>
-                                        Kontrola při dovolené, vybírání pošty, větrání, základní úklid
-                                    </td>
-                                    <td>250 Kč/návštěva</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="pricing-card">
+                        <div class="pricing-card-header">
+                            <div class="pricing-icon">
+                                <img src="images/zahrada.png" alt="Péče o zahradu" loading="lazy">
+                            </div>
+                            <div>
+                                <h2 class="pricing-card-title">Zahrada</h2>
+                                <p class="pricing-card-subtitle">Rostliny a údržba</p>
+                            </div>
+                        </div>
+                        <div class="pricing-items">
+                            <div class="pricing-item">
+                                <div>
+                                    <div class="pricing-item-name">Pokojové rostliny</div>
+                                    <div class="pricing-item-desc">do 10 květináčů</div>
+                                </div>
+                                <div class="pricing-item-price">200 Kč</div>
+                            </div>
+                            <div class="pricing-item">
+                                <div>
+                                    <div class="pricing-item-name">Pokojové rostliny</div>
+                                    <div class="pricing-item-desc">10-20 květináčů</div>
+                                </div>
+                                <div class="pricing-item-price">300 Kč</div>
+                            </div>
+                            <div class="pricing-item">
+                                <div>
+                                    <div class="pricing-item-name">Zalévání zahrady</div>
+                                    <div class="pricing-item-desc">malá do 100 m²</div>
+                                </div>
+                                <div class="pricing-item-price">250 Kč</div>
+                            </div>
+                            <div class="pricing-item">
+                                <div>
+                                    <div class="pricing-item-name">Zalévání zahrady</div>
+                                    <div class="pricing-item-desc">střední 100-300 m²</div>
+                                </div>
+                                <div class="pricing-item-price">400 Kč</div>
+                            </div>
+                            <div class="pricing-item">
+                                <div>
+                                    <div class="pricing-item-name">Zalévání zahrady</div>
+                                    <div class="pricing-item-desc">velká nad 300 m²</div>
+                                </div>
+                                <div class="pricing-item-price">od 550 Kč</div>
+                            </div>
+                            <div class="pricing-item">
+                                <div>
+                                    <div class="pricing-item-name">Drobná údržba</div>
+                                    <div class="pricing-item-desc">plení, úprava záhonů</div>
+                                </div>
+                                <div class="pricing-item-price">250 Kč/h</div>
+                            </div>
+                        </div>
+                        <div class="pricing-card-cta">
+                            <a href="index.html#kontakt" class="cta-button small">Objednat</a>
+                        </div>
                     </div>
 
-                    <div class="pricing-package">
-                        <div class="package-badge">💰 Výhodný balíček</div>
-                        <h4>Týdenní balíček "Klid na dovolené"</h4>
+                    <div class="pricing-card">
+                        <div class="pricing-card-header">
+                            <div class="pricing-icon">
+                                <img src="images/zvirata.png" alt="Hlídání zvířat" loading="lazy">
+                            </div>
+                            <div>
+                                <h2 class="pricing-card-title">Zvířata</h2>
+                                <p class="pricing-card-subtitle">Péče s láskou</p>
+                            </div>
+                        </div>
+                        <div class="pricing-items">
+                            <div class="pricing-item">
+                                <div>
+                                    <div class="pricing-item-name">Venčení psa</div>
+                                    <div class="pricing-item-desc">30 minut</div>
+                                </div>
+                                <div class="pricing-item-price">200 Kč</div>
+                            </div>
+                            <div class="pricing-item">
+                                <div>
+                                    <div class="pricing-item-name">Venčení psa</div>
+                                    <div class="pricing-item-desc">60 minut</div>
+                                </div>
+                                <div class="pricing-item-price">300 Kč</div>
+                            </div>
+                            <div class="pricing-item">
+                                <div>
+                                    <div class="pricing-item-name">Pravidelné venčení</div>
+                                    <div class="pricing-item-desc">5× týdně</div>
+                                </div>
+                                <div class="pricing-item-price">850 Kč/týd</div>
+                            </div>
+                            <div class="pricing-item">
+                                <div>
+                                    <div class="pricing-item-name">Péče o kočku</div>
+                                    <div class="pricing-item-desc">1× denně</div>
+                                </div>
+                                <div class="pricing-item-price">200 Kč</div>
+                            </div>
+                            <div class="pricing-item">
+                                <div>
+                                    <div class="pricing-item-name">Péče o kočku</div>
+                                    <div class="pricing-item-desc">2× denně + hraní</div>
+                                </div>
+                                <div class="pricing-item-price">400 Kč</div>
+                            </div>
+                        </div>
+                        <div class="pricing-card-cta">
+                            <a href="index.html#kontakt" class="cta-button small">Objednat</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="package-highlight">
+                    <div class="package-content">
+                        <h3>Týdenní balíček "Klid na dovolené"</h3>
                         <p>7× kontrola domácnosti + zalévání rostlin + vybírání pošty</p>
-                        <div class="package-price">
-                            <span class="old-price">1 750 Kč</span>
-                            <span class="new-price">1 500 Kč</span>
-                            <span class="savings">Ušetříte 250 Kč!</span>
-                        </div>
+                    </div>
+                    <div class="package-price-box">
+                        <div class="package-old-price">1 750 Kč</div>
+                        <div class="package-new-price">1 500 Kč</div>
+                        <div class="package-savings">Ušetříte 250 Kč</div>
                     </div>
                 </div>
 
-                <div class="pricing-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <svg width="48" height="48" viewBox="0 0 60 60" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M30 15C30 15 20 20 20 30C20 35 23 38 25 40C27 42 30 45 30 45C30 45 33 42 35 40C37 38 40 35 40 30C40 20 30 15 30 15Z"
-                                    stroke="currentColor" stroke-width="2" />
-                                <path d="M15 45C15 45 18 42 22 42C26 42 28 45 30 45C32 45 34 42 38 42C42 42 45 45 45 45"
-                                    stroke="currentColor" stroke-width="2" />
-                            </svg>
+                <div class="info-grid">
+                    <div class="info-box">
+                        <div class="info-box-icon">
+                            <img src="images/doprava.png" alt="Doprava" loading="lazy">
                         </div>
-                        <div>
-                            <h2 class="category-title">Zahrada a rostliny</h2>
-                            <p class="category-desc">Vaše rostliny budou v dobrých rukou</p>
-                        </div>
+                        <h4>Doprava</h4>
+                        <p>Zdarma v Mělníku<br>Mimo Mělník +8 Kč/km</p>
                     </div>
-
-                    <div class="pricing-table-wrapper">
-                        <table class="pricing-table">
-                            <thead>
-                                <tr>
-                                    <th>Služba</th>
-                                    <th>Popis</th>
-                                    <th>Cena</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Pokojové rostliny</strong></td>
-                                    <td>
-                                        <ul class="service-details">
-                                            <li>Do 10 květináčů: zalévání, kontrola</li>
-                                            <li>10-20 květináčů: rozšířená péče</li>
-                                            <li>Každý další: +15 Kč/kus</li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        200 Kč<br>
-                                        300 Kč<br>
-                                        +15 Kč
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Zalévání zahrady</strong></td>
-                                    <td>
-                                        <ul class="service-details">
-                                            <li>Malá zahrada (do 100 m²)</li>
-                                            <li>Střední zahrada (100-300 m²)</li>
-                                            <li>Velká zahrada (nad 300 m²)</li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        250 Kč<br>
-                                        400 Kč<br>
-                                        od 550 Kč
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Drobná údržba</strong></td>
-                                    <td>Plení, úprava záhonů, sekaní menších ploch</td>
-                                    <td>250 Kč/hod</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="info-box">
+                        <div class="info-box-icon">
+                            <img src="images/sleva.png" alt="Sleva" loading="lazy">
+                        </div>
+                        <h4>Sleva 10%</h4>
+                        <p>Při pravidelné spolupráci<br>(3× týdně a více)</p>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-box-icon">
+                            <img src="images/kalkulace.png" alt="Individuální kalkulace" loading="lazy">
+                        </div>
+                        <h4>Individuální kalkulace</h4>
+                        <p>Pro komplexní služby<br>a dlouhodobou spolupráci</p>
                     </div>
                 </div>
 
-                <div class="pricing-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <svg width="48" height="48" viewBox="0 0 60 60" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 30C20 30 22 25 25 25C28 25 30 28 30 28C30 28 32 25 35 25C38 25 40 30 40 30"
-                                    stroke="currentColor" stroke-width="2" />
-                                <circle cx="25" cy="22" r="2" fill="currentColor" />
-                                <circle cx="35" cy="22" r="2" fill="currentColor" />
-                                <path d="M15 35C15 35 20 32 30 32C40 32 45 35 45 35L40 45H20L15 35Z"
-                                    stroke="currentColor" stroke-width="2" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h2 class="category-title">Péče o zvířata</h2>
-                            <p class="category-desc">S láskou a zodpovědností</p>
-                        </div>
-                    </div>
-
-                    <div class="pricing-table-wrapper">
-                        <table class="pricing-table">
-                            <thead>
-                                <tr>
-                                    <th>Služba</th>
-                                    <th>Popis</th>
-                                    <th>Cena</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Venčení psa</strong></td>
-                                    <td>
-                                        <ul class="service-details">
-                                            <li>30 minut: základní procházka</li>
-                                            <li>60 minut: delší procházka</li>
-                                            <li>Pravidelné venčení (5× týdně)</li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        200 Kč<br>
-                                        300 Kč<br>
-                                        850 Kč/týden
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Péče o kočku</strong></td>
-                                    <td>
-                                        <ul class="service-details">
-                                            <li>Krmení + kontrola (1× denně)</li>
-                                            <li>Rozšířená péče (2× denně + hraní)</li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        200 Kč<br>
-                                        400 Kč
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="pricing-general-notes">
-                    <h3>Důležité informace</h3>
-                    <div class="notes-grid">
-                        <div class="note-item">
-                            <span class="note-icon">🚗</span>
-                            <div>
-                                <strong>Doprava</strong>
-                                <p>Zdarma v Mělníku<br>Mimo Mělník +8 Kč/km</p>
-                            </div>
-                        </div>
-                        <div class="note-item">
-                            <span class="note-icon">💰</span>
-                            <div>
-                                <strong>Sleva 10%</strong>
-                                <p>Při pravidelné spolupráci<br>(3× týdně a více)</p>
-                            </div>
-                        </div>
-                        <div class="note-item">
-                            <span class="note-icon">📋</span>
-                            <div>
-                                <strong>Individuální kalkulace</strong>
-                                <p>Pro komplexní služby<br>a dlouhodobou spolupráci</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="disclaimer">Všechny ceny jsou orientační a mohou se lišit podle konkrétních požadavků a
-                        rozsahu služeb. Přesnou cenu vám rádi sdělíme po nezávazné konzultaci.</p>
-                </div>
-
-                <div class="pricing-page-cta">
+                <div class="pricing-cta-section">
                     <h3>Máte zájem o naše služby?</h3>
-                    <p>Kontaktujte nás a my vám připravíme nabídku přímo na míru vašim potřebám.</p>
+                    <p>Kontaktujte nás a připravíme nabídku na míru.</p>
                     <div class="cta-buttons">
                         <a href="index.html#kontakt" class="cta-button">Nezávazně poptat</a>
                         <a href="tel:+420736231196" class="cta-button secondary">Zavolat: +420 736 231 196</a>
@@ -308,30 +325,25 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>Pro Váš Klid</h3>
-                    <p>Vy nemusíte – já zařídím</p>
+            <div class="footer-top">
+                <span class="footer-find">Najdete nás na:</span>
+                <div class="footer-external-links">
+                    <a href="https://g.co/kgs/provasklid" class="external-link google" target="_blank" rel="noopener noreferrer">Google</a>
+                    <a href="https://www.firmy.cz/detail/provasklid" class="external-link" target="_blank" rel="noopener noreferrer">Firmy.cz</a>
                 </div>
-
-                <div class="footer-contact">
-                    <a href="tel:+420736231196">📞 +420 736 231 196</a>
-                    <a href="mailto:info@provasklid.cz">✉️ info@provasklid.cz</a>
-                </div>
-
-                <nav class="footer-nav">
-                    <a href="index.html#home">Domů</a>
-                    <a href="index.html#sluzby">Služby</a>
-                    <a href="cenik.html">Ceník</a>
-                    <a href="index.html#kontakt">Kontakt</a>
-                </nav>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Pro Váš Klid • Mělník a okolí</p>
+                <p>&copy; 2025 Pro Váš Klid &nbsp;|&nbsp; Mělník - Mšeno - Neratovice - Byšice</p>
+                <div class="footer-legal">
+                    <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
+                    <span>|</span>
+                    <a href="podminky.html">Podmínky</a>
+                </div>
             </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 
