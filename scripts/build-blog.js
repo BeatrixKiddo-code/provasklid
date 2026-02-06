@@ -241,6 +241,12 @@ ${articleCards}
 async function buildBlog() {
     console.log('Stahuji články z Notion...');
 
+    const existingFiles = fs.readdirSync(BLOG_DIR).filter(f => f.endsWith('.html'));
+    existingFiles.forEach(file => {
+        fs.unlinkSync(path.join(BLOG_DIR, file));
+        console.log(`Smazán starý soubor: ${file}`);
+    });
+
     const today = new Intl.DateTimeFormat('sv-SE', {
         timeZone: 'Europe/Prague'
     }).format(new Date());
