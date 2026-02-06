@@ -1,0 +1,12 @@
+{
+  "name": "provasklid-blog-builder",
+  "version": "1.0.0",
+  "description": "Build script for Notion to static blog",
+  "scripts": {
+    "build": "node build-blog.js"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.14",
+    "notion-to-md": "^3.1.1"
+  }
+}

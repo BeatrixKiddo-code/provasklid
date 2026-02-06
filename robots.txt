@@ -1,0 +1,10 @@
+# robots.txt pro provasklid.cz
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://provasklid.cz/sitemap.xml
+
+# Crawl-delay (volitelné - pro slušné chování botů)
+Crawl-delay: 1
