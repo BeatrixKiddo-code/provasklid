@@ -2088,7 +2088,7 @@ h3 {
 }
 
 .service-intro-image {
-    width: 100%;
+    max-width: 50%;
 }
 
 .service-intro-image img {
