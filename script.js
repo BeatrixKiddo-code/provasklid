@@ -513,3 +513,29 @@
     console.log('%cVy nemusíte – my zařídíme.', 'font-size: 14px; color: #5A6A7A; font-style: italic;');
 
 })();
+
+document.addEventListener('DOMContentLoaded', function() {
+    const processSteps = document.querySelector('.process-steps');
+    
+    if (processSteps) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+        
+        observer.observe(processSteps);
+    }
+});
+    document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            this.closest('.nav-dropdown').classList.toggle('active');
+        });
+    });
