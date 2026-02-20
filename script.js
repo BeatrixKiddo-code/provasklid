@@ -74,9 +74,11 @@
 
         navToggle.addEventListener('click', toggleNav);
 
-        // Close menu when clicking nav links
+        // Close menu when clicking nav links (not the dropdown toggle)
         navLinks.forEach(link => {
-            link.addEventListener('click', closeNav);
+            if (!link.classList.contains('nav-dropdown-toggle')) {
+                link.addEventListener('click', closeNav);
+            }
         });
 
         // Close menu on escape key

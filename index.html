@@ -532,17 +532,6 @@
     </div>
 
     <script src="script.js" defer></script>
-    <script>
-        // Dropdown toggle pro mobile
-        document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    this.closest('.nav-dropdown').classList.toggle('active');
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
