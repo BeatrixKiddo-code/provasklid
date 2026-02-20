@@ -779,6 +779,24 @@ h3 {
     font-weight: 500;
 }
 
+.value-prop-icon {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.value-prop-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-cta {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+}
+
 .faq {
     padding: var(--spacing-2xl) 0;
     background-color: var(--color-bg-white);
