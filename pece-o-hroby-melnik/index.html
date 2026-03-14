@@ -502,6 +502,11 @@
             margin-bottom: var(--spacing-sm);
         }
 
+        .sluzba-icon img {
+            width: 80%;
+            height: auto;
+        }
+
         .sluzba-title {
             font-family: var(--font-serif);
             font-size: var(--text-lg);
@@ -1253,17 +1258,17 @@
 
                 <div class="sluzby-grid">
                     <div class="sluzba-item">
-                        <div class="sluzba-icon">🌿</div>
+                        <div class="sluzba-icon"><img src="../images/udrzba.webp" alt="Údržba hrobů"></div>
                         <h3 class="sluzba-title">Údržba hrobů</h3>
                         <p class="sluzba-desc">Pravidelné čištění náhrobků, odstranění plevele a úprava okolí hrobu.</p>
                     </div>
                     <div class="sluzba-item">
-                        <div class="sluzba-icon">🕯️</div>
+                        <div class="sluzba-icon"><img src="../images/vyzdoba.webp" alt="Výzdoba hrobů"></div>
                         <h3 class="sluzba-title">Výzdoba hrobů</h3>
                         <p class="sluzba-desc">Sezónní květinová výzdoba, věnce a zapálení svíčky.</p>
                     </div>
                     <div class="sluzba-item">
-                        <div class="sluzba-icon">📸</div>
+                        <div class="sluzba-icon"><img src="../images/sprava.webp" alt="Správa hrobů na dálku"></div>
                         <h3 class="sluzba-title">Správa hrobů na dálku</h3>
                         <p class="sluzba-desc">Fotodokumentace před a po pro rodiny žijící daleko od Mělníka.</p>
                     </div>
@@ -1366,11 +1371,11 @@
                         <h3 class="pricing-name">Péče s výzdobou</h3>
                         <div class="pricing-price-box">
                             <div class="pricing-price">1 450 Kč</div>
-                            <div class="pricing-period">jednorázově + cena dekorace</div>
+                            <div class="pricing-period">jednorázově</div>
                         </div>
                         <ul class="pricing-features">
                             <li>Vše ze Standardní péče</li>
-                            <li>Sezónní květinová výzdoba</li>
+                            <li>Sezónní květinová výzdoba včetně dekorace</li>
                             <li>Výměna svíček (větší typ)</li>
                             <li>Návrh výzdoby dle tradic rodiny</li>
                             <li>Fotodokumentace před a po</li>
@@ -1393,13 +1398,7 @@
                 </div>
 
                 <div class="pricing-note-unified">
-                    💐 <strong>Květiny, dekorace či věnec</strong> jsou účtovány za individuální příplatek dle skutečných nákladů. Ceny platí
-                    pro hřbitovy v okolí Mělníka – u vzdálenějších lokalit může být účtován příplatek za dopravu.
-                </div>
-
-                <div class="pricing-footer">
-                    <p>Všechny ceny jsou orientační a závisí na rozsahu prací, stavu hrobu a lokalitě. Přesnou cenu vám
-                        rádi sdělíme po nezávazné poptávce.</p>
+                    Všechny ceny jsou orientační a závisí na rozsahu prací, stavu hrobu a lokalitě. Ceny platí pro hřbitovy v okolí Mělníka – u vzdálenějších lokalit může být účtován příplatek za dopravu. Přesnou cenu vám rádi sdělíme po nezávazné poptávce.
                 </div>
             </div>
         </section>
@@ -1580,7 +1579,7 @@
                     });
 
                     card.innerHTML = `
-                        <img src="${item.obrazek}" alt="${item.text}" class="aktuality-image" loading="lazy">
+                        <img src="${item.obrazek}" alt="${item.text}" class="aktuality-image" loading="lazy" onclick="openLightbox('${item.obrazek}')" style="cursor:pointer;">
                         <div class="aktuality-content">
                             <div class="aktuality-datum">${formatDatum}</div>
                             <p class="aktuality-text">${item.text}</p>
