@@ -77,6 +77,8 @@ function articleTemplate(article, content) {
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="blog.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon_provasklid32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon_provasklid16.png">
 </head>
 <body>
     <header class="header">
@@ -173,6 +175,8 @@ function blogIndexTemplate(articles) {
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="blog.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon_provasklid32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon_provasklid16.png">
 </head>
 <body>
     <header class="header">
