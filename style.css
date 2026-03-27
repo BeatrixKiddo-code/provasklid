@@ -356,6 +356,10 @@ h3 {
     right: 0;
     bottom: 0;
     z-index: 1;
+    background: linear-gradient(to right,
+        rgba(240, 244, 250, 0.82) 0%,
+        rgba(240, 244, 250, 0.55) 50%,
+        rgba(240, 244, 250, 0.1) 100%);
 }
 
 .hero-container {
@@ -382,9 +386,10 @@ h3 {
 .hero-subtitle {
     font-family: var(--font-heading);
     font-size: clamp(16px, 2.5vw, 18px);
-    color: var(--color-text-muted);
+    color: var(--color-text-dark);
     margin-bottom: var(--spacing-lg);
     line-height: 1.7;
+    text-shadow: 0 1px 12px rgba(240, 244, 250, 1), 0 0 30px rgba(240, 244, 250, 0.9);
 }
 
 .hero-wave {
@@ -1622,22 +1627,30 @@ h3 {
 }
 @media (max-width: 1024px) {
     .hero {
-        background-position: center center;
+        background-position: center right;
     }
 
     .hero::before {
         background: linear-gradient(to bottom,
-                rgba(240, 244, 250, 0.2) 0%,
-                rgba(240, 244, 250, 0.6) 100%);
+                rgba(240, 244, 250, 0.15) 0%,
+                rgba(240, 244, 250, 0.88) 100%);
     }
 
     .hero-container {
         min-height: 60vh;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: flex-start;
         padding-top: var(--spacing-2xl);
         padding-bottom: var(--spacing-lg);
+    }
+
+    .hero-title {
+        margin-bottom: 5rem;
+    }
+
+    .hero-subtitle {
+        margin-bottom: 5rem;
     }
 
     .hero-content {
@@ -1784,7 +1797,7 @@ h3 {
 
     .hero {
         min-height: 70vh;
-        background-position: 80% center;
+        background-position: 80% right;
     }
 
     .page-hero {
@@ -1860,9 +1873,50 @@ h3 {
         background-position: center right;
         background-repeat: no-repeat;
     }
+
+    .hero-title {
+        margin-bottom: 6rem;
+    }
+
+    .hero-subtitle {
+        margin-bottom: 5rem;
+    }
+
+    .hero-content {
+        align-items: center;
+    }
+
+    .hero-container {
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
+    .hero {
+        background-position: 90% center;
+    }
+
+    .hero::before {
+        background: linear-gradient(to bottom,
+                rgba(240, 244, 250, 0.55) 0%,
+                rgba(240, 244, 250, 0.95) 100%);
+    }
+
+    .hero-container {
+        align-items: center;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero-title {
+        margin-bottom: clamp(3rem, 18vw, 7rem);
+    }
+
+    .hero-subtitle {
+        margin-bottom: clamp(3.5rem, 22vw, 9rem);
+    }
+
     .services {
         margin-top: 30px;
     }
