@@ -739,7 +739,7 @@ h3 {
     padding-top: 70px;
     background-image: url('images/references-background.webp');
     background-size: cover;
-    background-position: center right;
+    background-position: right 46%;
     background-repeat: no-repeat;
     overflow: hidden;
 }
@@ -1868,10 +1868,7 @@ h3 {
     }
 
     .references {
-        background-image: url('images/references-background-mobile.webp');
-        background-size: auto;
-        background-position: center right;
-        background-repeat: no-repeat;
+        background-image: none;
     }
 
     .hero-title {
