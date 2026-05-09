@@ -183,13 +183,14 @@
         }
 
         :root {
-            --color-white: #FFFFFF;
-            --color-light-gray: #F5F5F5;
+            --color-white: #FAF8F5;
+            --color-light-gray: #F5F3EF;
             --color-gray: #E0E0E0;
-            --color-dark-gray: #666666;
-            --color-green: #2D4631;
-            --color-gold: #C4A661;
-            --color-black: #1A1A1A;
+            --color-dark-gray: #6B6B6B;
+            --color-green: #6B7B6E;
+            --color-green-dark: #5C6B5E;
+            --color-gold: #6B7B6E;
+            --color-black: #2D2D2D;
             --font-custom: "MujFont", "Cormorant Garamond", serif;
             --font-serif: 'Cormorant Garamond', serif;
             --font-sans: 'Inter', sans-serif;
@@ -197,9 +198,9 @@
             --spacing-xs: clamp(0.5rem, 1vw, 0.75rem);
             --spacing-sm: clamp(0.75rem, 1.5vw, 1rem);
             --spacing-md: clamp(1rem, 2vw, 1.5rem);
-            --spacing-lg: clamp(1.5rem, 3vw, 2.5rem);
-            --spacing-xl: clamp(2rem, 4vw, 3.5rem);
-            --spacing-2xl: clamp(3rem, 6vw, 5rem);
+            --spacing-lg: clamp(1.25rem, 2.5vw, 2rem);
+            --spacing-xl: clamp(1.5rem, 3vw, 2.5rem);
+            --spacing-2xl: clamp(2rem, 4vw, 3.5rem);
 
             --text-xs: clamp(0.75rem, 1.5vw, 0.875rem);
             --text-sm: clamp(0.875rem, 1.8vw, 1rem);
@@ -216,13 +217,13 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            color: #333;
+            color: #2D2D2D;
             line-height: 1.6;
-            background-color: #fdfbf6;
+            background-color: #FAF8F5;
         }
 
         .container {
-            width: min(100% - 2rem, 1200px);
+            width: min(100% - 2rem, 1320px);
             margin: 0 auto;
             padding: 0 var(--spacing-md);
         }
@@ -232,10 +233,10 @@
             top: 0;
             left: 0;
             right: 0;
-            background-color: rgba(255, 255, 255, 0.97);
+            background-color: rgba(250, 248, 245, 0.97);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
         }
 
         .header-content {
@@ -306,7 +307,7 @@
 
         .section-header {
             text-align: center;
-            margin-bottom: var(--spacing-xl);
+            margin-bottom: var(--spacing-lg);
         }
 
         .section-title {
@@ -387,26 +388,26 @@
         .cta-button {
             display: inline-block;
             padding: clamp(1rem, 2vw, 1.25rem) clamp(2rem, 4vw, 3rem);
-            background-color: var(--color-gold);
-            color: var(--color-white);
+            background-color: var(--color-green);
+            color: #FFFFFF;
             text-decoration: none;
             font-size: var(--text-sm);
             font-weight: 500;
             letter-spacing: 0.5px;
             border-radius: 4px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(196, 166, 97, 0.3);
+            box-shadow: 0 4px 18px rgba(107, 123, 110, 0.25);
         }
 
         .cta-button:hover {
-            background-color: #B89955;
+            background-color: var(--color-green-dark);
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(196, 166, 97, 0.5);
+            box-shadow: 0 8px 26px rgba(107, 123, 110, 0.35);
         }
 
         .aktuality {
             padding: var(--spacing-2xl) 0;
-            background-color: var(--color-white);
+            background-color: #FAF8F5;
         }
 
         .aktuality-grid {
@@ -417,16 +418,16 @@
         }
 
         .aktuality-card {
-            background-color: var(--color-white);
+            background-color: #FFFFFF;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 16px rgba(45, 45, 45, 0.06);
             transition: all 0.3s ease;
         }
 
         .aktuality-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 12px 28px rgba(45, 45, 45, 0.08);
         }
 
         .aktuality-image {
@@ -479,22 +480,22 @@
 
         .sluzby-kompakt {
             padding: var(--spacing-2xl) 0;
-            background-color: var(--color-light-gray);
+            background-color: #F5F3EF;
         }
 
         .sluzby-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: var(--spacing-lg);
-            margin-bottom: var(--spacing-xl);
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
         }
 
         .sluzba-item {
             text-align: center;
-            padding: var(--spacing-lg);
-            background-color: var(--color-white);
+            padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg);
+            background-color: #FFFFFF;
             border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 12px rgba(45, 45, 45, 0.05);
         }
 
         .sluzba-icon {
@@ -527,9 +528,9 @@
             gap: var(--spacing-md);
             flex-wrap: wrap;
             padding: var(--spacing-lg);
-            background-color: var(--color-white);
+            background-color: #FFFFFF;
             border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 12px rgba(45, 45, 45, 0.05);
         }
 
         .proces-krok {
@@ -546,7 +547,7 @@
             height: 40px;
             min-width: 40px;
             background-color: var(--color-green);
-            color: var(--color-white);
+            color: #FFFFFF;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -568,44 +569,46 @@
         }
 
         .proces-sipka {
-            color: var(--color-gold);
+            color: var(--color-green);
             font-size: 1.5rem;
             display: flex;
             align-items: center;
+            opacity: 0.6;
         }
 
         .pricing {
             padding: var(--spacing-2xl) 0;
-            background-color: var(--color-white);
+            background-color: #FAF8F5;
         }
 
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
             gap: var(--spacing-md);
-            margin-bottom: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
         }
 
         .pricing-card {
-            background-color: var(--color-white);
-            border: 2px solid var(--color-gray);
+            background-color: #FFFFFF;
+            border: 1px solid rgba(107, 123, 110, 0.18);
             border-radius: 12px;
             padding: var(--spacing-md);
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
+            box-shadow: 0 2px 10px rgba(45, 45, 45, 0.04);
         }
 
         .pricing-card:hover {
-            border-color: var(--color-gold);
+            border-color: var(--color-green);
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(196, 166, 97, 0.15);
+            box-shadow: 0 12px 32px rgba(107, 123, 110, 0.12);
         }
 
         .pricing-card.featured {
             border-color: var(--color-green);
             position: relative;
-            box-shadow: 0 10px 30px rgba(45, 70, 49, 0.1);
+            box-shadow: 0 8px 24px rgba(107, 123, 110, 0.12);
         }
 
         .pricing-badge {
@@ -614,7 +617,7 @@
             left: 50%;
             transform: translateX(-50%);
             background-color: var(--color-green);
-            color: var(--color-white);
+            color: #FFFFFF;
             padding: 6px 20px;
             border-radius: 20px;
             font-size: var(--text-xs);
@@ -627,22 +630,22 @@
             font-size: var(--text-xl);
             font-weight: 600;
             color: var(--color-green);
-            margin-bottom: var(--spacing-md);
+            margin-bottom: var(--spacing-sm);
             text-align: center;
         }
 
         .pricing-price-box {
             text-align: center;
-            margin-bottom: var(--spacing-lg);
-            padding: var(--spacing-md);
-            background: linear-gradient(135deg, rgba(196, 166, 97, 0.05), rgba(45, 70, 49, 0.05));
+            margin-bottom: var(--spacing-md);
+            padding: var(--spacing-sm) var(--spacing-md);
+            background: #F5F3EF;
             border-radius: 8px;
         }
 
         .pricing-price {
             font-size: clamp(2rem, 5vw, 2.5rem);
             font-weight: 700;
-            color: var(--color-gold);
+            color: var(--color-green);
             margin-bottom: var(--spacing-xs);
             transition: all 0.3s ease;
         }
@@ -661,8 +664,8 @@
         .pricing-features li {
             font-size: var(--text-sm);
             color: var(--color-dark-gray);
-            padding: var(--spacing-sm) 0;
-            padding-left: 28px;
+            padding: 6px 0;
+            padding-left: 26px;
             position: relative;
             line-height: 1.4;
         }
@@ -678,9 +681,9 @@
         .frequency-selector {
             margin-bottom: var(--spacing-lg);
             padding: var(--spacing-md);
-            background-color: var(--color-light-gray);
+            background-color: #F5F3EF;
             border-radius: 8px;
-            border: 2px solid var(--color-gray);
+            border: 1px solid rgba(107, 123, 110, 0.15);
         }
 
         .frequency-selector label {
@@ -697,13 +700,13 @@
             font-family: var(--font-sans);
             font-size: var(--text-sm);
             color: var(--color-black);
-            background-color: var(--color-white);
-            border: 2px solid var(--color-gray);
+            background-color: #FFFFFF;
+            border: 1px solid rgba(107, 123, 110, 0.25);
             border-radius: 6px;
             cursor: pointer;
             transition: all 0.3s ease;
             appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232D4631' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B7B6E' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 12px center;
             padding-right: 40px;
@@ -728,7 +731,7 @@
         }
 
         .frequency-info.show-savings {
-            color: var(--color-gold);
+            color: var(--color-green);
             font-weight: 600;
         }
 
@@ -736,30 +739,33 @@
             display: block;
             width: 100%;
             padding: var(--spacing-md) var(--spacing-lg);
-            background-color: var(--color-green);
-            color: var(--color-white);
+            background-color: transparent;
+            color: var(--color-green);
             font-family: var(--font-sans);
             font-size: var(--text-sm);
             font-weight: 600;
             text-align: center;
-            border: none;
+            border: 1.5px solid var(--color-green);
             border-radius: 6px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .pricing-button:hover {
-            background-color: #1F3123;
+            background-color: var(--color-green);
+            color: #FFFFFF;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(45, 70, 49, 0.3);
+            box-shadow: 0 6px 18px rgba(107, 123, 110, 0.22);
         }
 
         .pricing-button-featured {
-            background-color: var(--color-gold);
+            background-color: var(--color-green);
+            color: #FFFFFF;
         }
 
         .pricing-button-featured:hover {
-            background-color: #B89955;
+            background-color: var(--color-green-dark);
+            color: #FFFFFF;
         }
 
         .pricing-note-unified {
@@ -768,9 +774,9 @@
             font-style: italic;
             line-height: 1.6;
             padding: var(--spacing-md);
-            background-color: rgba(196, 166, 97, 0.08);
+            background-color: #F5F3EF;
             border-radius: 8px;
-            border-left: 4px solid var(--color-gold);
+            border-left: 4px solid var(--color-green);
             margin-bottom: var(--spacing-lg);
             max-width: 800px;
             margin-left: auto;
@@ -782,7 +788,7 @@
             margin: 0 auto;
             text-align: center;
             padding: var(--spacing-lg);
-            background-color: var(--color-light-gray);
+            background-color: #F5F3EF;
             border-radius: 8px;
         }
 
@@ -792,14 +798,16 @@
         }
 
         .gallery {
-            background-color: var(--color-light-gray);
+            background-color: #F5F3EF;
             padding: var(--spacing-2xl) 0;
         }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-            gap: var(--spacing-lg);
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+            gap: var(--spacing-md);
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         .gallery-item {
@@ -807,13 +815,13 @@
             border-radius: 8px;
             overflow: hidden;
             cursor: pointer;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 16px rgba(45, 45, 45, 0.08);
             transition: all 0.3s ease;
         }
 
         .gallery-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 12px 32px rgba(45, 45, 45, 0.12);
         }
 
         .gallery-item img {
@@ -828,7 +836,7 @@
             left: 0;
             right: 0;
             background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-            color: var(--color-white);
+            color: #FFFFFF;
             padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
             font-size: var(--text-sm);
         }
@@ -842,7 +850,7 @@
 
         .gallery-label-service {
             display: inline-block;
-            background-color: var(--color-gold);
+            background-color: var(--color-green);
             padding: 2px 8px;
             border-radius: 4px;
             font-size: var(--text-xs);
@@ -850,7 +858,7 @@
         }
 
         .testimonials {
-            background-color: var(--color-white);
+            background-color: #FAF8F5;
             padding: var(--spacing-2xl) 0;
         }
 
@@ -861,15 +869,17 @@
         }
 
         .testimonial-card {
-            background-color: var(--color-light-gray);
-            padding: var(--spacing-xl);
+            background-color: #F5F3EF;
+            padding: var(--spacing-lg);
             border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(45, 45, 45, 0.04);
         }
 
         .testimonial-stars {
-            color: var(--color-gold);
+            color: #C4A661;
             font-size: var(--text-lg);
             margin-bottom: var(--spacing-md);
+            opacity: 0.85;
         }
 
         .testimonial-text {
@@ -887,21 +897,21 @@
         }
 
         .contact {
-            background-color: var(--color-light-gray);
+            background-color: #F5F3EF;
             padding: var(--spacing-2xl) 0;
         }
 
         .contact-form {
-            max-width: 600px;
+            max-width: 640px;
             margin: 0 auto;
-            background-color: var(--color-white);
-            padding: var(--spacing-xl);
+            background-color: #FFFFFF;
+            padding: var(--spacing-lg);
             border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 18px rgba(45, 45, 45, 0.05);
         }
 
         .form-group {
-            margin-bottom: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
         }
 
         .form-group label {
@@ -918,9 +928,9 @@
             padding: var(--spacing-sm) var(--spacing-md);
             font-family: var(--font-sans);
             font-size: var(--text-sm);
-            color: var(--color-black);
-            background-color: var(--color-white);
-            border: 2px solid var(--color-gray);
+            color: #2D2D2D;
+            background-color: #FFFFFF;
+            border: 1px solid rgba(107, 123, 110, 0.25);
             border-radius: 4px;
             transition: all 0.3s ease;
         }
@@ -929,7 +939,7 @@
         .form-group textarea:focus {
             outline: none;
             border-color: var(--color-green);
-            box-shadow: 0 0 0 3px rgba(45, 70, 49, 0.1);
+            box-shadow: 0 0 0 3px rgba(107, 123, 110, 0.15);
         }
 
         .form-group textarea {
@@ -957,7 +967,7 @@
             width: 100%;
             padding: var(--spacing-md) var(--spacing-xl);
             background-color: var(--color-green);
-            color: var(--color-white);
+            color: #FFFFFF;
             font-family: var(--font-sans);
             font-size: var(--text-sm);
             font-weight: 600;
@@ -968,9 +978,9 @@
         }
 
         .submit-button:hover {
-            background-color: #1F3123;
+            background-color: var(--color-green-dark);
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(45, 70, 49, 0.3);
+            box-shadow: 0 8px 20px rgba(107, 123, 110, 0.25);
         }
 
         .form-success {
@@ -989,16 +999,16 @@
         }
 
         .footer {
-            background-color: var(--color-green);
-            color: var(--color-white);
-            padding: var(--spacing-xl) 0 var(--spacing-md);
+            background-color: var(--color-green-dark);
+            color: #FFFFFF;
+            padding: var(--spacing-lg) 0 var(--spacing-md);
         }
 
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
-            gap: var(--spacing-xl);
-            margin-bottom: var(--spacing-lg);
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
         }
 
         .footer-section h3 {
@@ -1021,7 +1031,7 @@
         }
 
         .footer-nav a:hover {
-            color: var(--color-white);
+            color: #FFFFFF;
         }
 
         .footer-contact p {
@@ -1031,13 +1041,14 @@
         }
 
         .footer-contact a {
-            color: var(--color-gold);
+            color: #FFFFFF;
             text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
         }
 
         .footer-bottom {
             text-align: center;
-            padding-top: var(--spacing-lg);
+            padding-top: var(--spacing-md);
             border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
 
@@ -1090,7 +1101,7 @@
             top: 80px;
             left: 0;
             right: 0;
-            background-color: rgba(255, 255, 255, 0.98);
+            background-color: rgba(250, 248, 245, 0.98);
             backdrop-filter: blur(10px);
             padding: var(--spacing-lg);
             transform: translateY(-100%);
@@ -1224,7 +1235,7 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Aktuality</h2>
-                    <p class="section-subtitle">Co jsme v poslední době udělali</p>
+                    <p class="section-subtitle">Co jsem v poslední době udělala</p>
                 </div>
 
                 <div class="aktuality-grid" id="aktuality-grid">
@@ -1287,7 +1298,7 @@
                         <div class="proces-cislo">2</div>
                         <div class="proces-text">
                             <strong>Já se postarám</strong>
-                            Provedeme vše s péčí a úctou.
+                            Provedu vše s péčí a úctou.
                         </div>
                     </div>
                     <div class="proces-sipka">→</div>
@@ -1338,7 +1349,7 @@
                     </div>
 
                     <div class="pricing-card featured" data-package="general">
-                        <span class="pricing-badge">Doporučujeme</span>
+                        <span class="pricing-badge">Doporučuji</span>
                         <h3 class="pricing-name">Generální úklid</h3>
                         <div class="pricing-price-box">
                             <div class="pricing-price">1 450 Kč</div>
@@ -1398,7 +1409,7 @@
                 </div>
 
                 <div class="pricing-note-unified">
-                    Všechny ceny jsou orientační a závisí na rozsahu prací, stavu hrobu a lokalitě. Ceny platí pro hřbitovy v okolí Mělníka – u vzdálenějších lokalit může být účtován příplatek za dopravu. Přesnou cenu vám rádi sdělíme po nezávazné poptávce.
+                    Všechny ceny jsou orientační a závisí na rozsahu prací, stavu hrobu a lokalitě. Ceny platí pro hřbitovy v okolí Mělníka – u vzdálenějších lokalit může být účtován příplatek za dopravu. Přesnou cenu vám ráda sdělím po nezávazné poptávce.
                 </div>
             </div>
         </section>
@@ -1470,8 +1481,8 @@
         <section id="kontakt" class="contact">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Kontaktujte nás</h2>
-                    <p class="section-subtitle">Rádi vám připravíme nabídku na míru</p>
+                    <h2 class="section-title">Kontaktujte mě</h2>
+                    <p class="section-subtitle">Ráda vám připravím nabídku na míru</p>
                 </div>
 
                 <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvgdgbrp" method="POST"
@@ -1510,7 +1521,7 @@
                     <button type="submit" class="submit-button">Odeslat poptávku</button>
 
                     <div class="form-success" id="formSuccess">
-                        <p>✓ Děkujeme za vaši poptávku! Brzy se vám ozveme.</p>
+                        <p>✓ Děkuji za vaši poptávku! Brzy se vám ozvu.</p>
                     </div>
                 </form>
             </div>
@@ -1742,8 +1753,8 @@
             const packageField = document.getElementById('selected-package');
             packageField.value = `${packageName} – ${selectedOption.textContent}`;
 
-            packageField.style.backgroundColor = 'rgba(196, 166, 97, 0.1)';
-            packageField.style.borderColor = 'var(--color-gold)';
+            packageField.style.backgroundColor = 'rgba(107, 123, 110, 0.1)';
+            packageField.style.borderColor = 'var(--color-green)';
             setTimeout(() => {
                 packageField.style.backgroundColor = '';
                 packageField.style.borderColor = '';
