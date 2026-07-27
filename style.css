@@ -1241,6 +1241,15 @@ h3 {
     color: #1877F2;
 }
 
+.footer-note {
+    max-width: 720px;
+    margin: var(--spacing-md) auto 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+    text-align: center;
+}
+
 .footer-bottom {
     padding-top: var(--spacing-md);
     text-align: center;
