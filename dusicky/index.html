@@ -35,7 +35,7 @@
             rel="stylesheet">
     </noscript>
     <link rel="preload" href="../fonts/Rawengulksans-8g8B.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../images/dusicky/dusicky-po-1.webp" as="image">
+    <link rel="preload" href="../images/dusicky/dusicky-hero.webp" as="image">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon_hrbitov.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon_hrbitov16.png">
 
@@ -544,7 +544,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: 50% 30%;
+            object-position: 40% 60%;
         }
 
         .hero-badge {
@@ -1643,6 +1643,59 @@
             }
         }
 
+        /* Ilustrační foto v hero: na mobilu jen jako téměř neviditelné pozadí */
+        @media (max-width: 899px) {
+            .hero-grid {
+                position: static;
+            }
+
+            .hero-text {
+                position: relative;
+                z-index: 1;
+            }
+
+            .hero-visual {
+                position: absolute;
+                inset: 0;
+                max-width: none;
+                margin: 0;
+                z-index: 0;
+                pointer-events: none;
+            }
+
+            .hero-photo {
+                height: 100%;
+                aspect-ratio: auto;
+                border-radius: 0;
+                box-shadow: none;
+                background: none;
+            }
+
+            .hero-photo img {
+                opacity: 0.09;
+                filter: grayscale(0.5);
+                object-position: 50% 75%;
+                -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 55%);
+                mask-image: linear-gradient(to bottom, transparent 0%, #000 55%);
+            }
+
+            .hero-badge {
+                display: none;
+            }
+        }
+
+        /* Na desktopu tlumenější, aby ilustrační foto nepřebíjelo text */
+        @media (min-width: 900px) {
+            .hero-photo img {
+                filter: saturate(0.7) brightness(1.04);
+                opacity: 0.88;
+            }
+
+            .hero-photo {
+                box-shadow: 0 14px 40px rgba(63, 75, 66, 0.10);
+            }
+        }
+
         /* ---------- Responzivita ---------- */
         @media (max-width: 719px) {
 
@@ -1853,13 +1906,13 @@
 
                 <div class="hero-visual">
                     <div class="hero-photo">
-                        <img src="../images/dusicky/dusicky-po-1.webp" width="528" height="925"
-                            alt="Hrob na hřbitově sv. Václava v Mělníku po podzimním úklidu, s vřesem a dušičkovou výzdobou"
+                        <img src="../images/dusicky/dusicky-hero.webp" width="921" height="1152"
+                            alt="Upravený hrob s dušičkovou výzdobou, vřesem a zapálenými svíčkami za podzimního večera"
                             fetchpriority="high">
                     </div>
                     <div class="hero-badge">
                         <svg aria-hidden="true"><use href="#i-camera" /></svg>
-                        <div><strong>Skutečná realizace</strong><span>Mělník, podzim · po úklidu</span></div>
+                        <div><strong>Fotografie po dokončení</strong><span>Uvidíte, že je hrob připravený</span></div>
                     </div>
                 </div>
             </div>
