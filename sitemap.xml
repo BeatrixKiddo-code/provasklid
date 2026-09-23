@@ -49,4 +49,12 @@
         <priority>0.7</priority>
     </url>
 
+    <!-- Dušičková péče o hroby 2026 – sezónní landing page -->
+    <url>
+        <loc>https://provasklid.cz/dusicky/</loc>
+        <lastmod>2026-09-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>
