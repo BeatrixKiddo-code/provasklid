@@ -20,11 +20,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link
-            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
             rel="stylesheet">
     </noscript>
     <link rel="preload" href="../fonts/Rawengulksans-8g8B.woff2" as="font" type="font/woff2" crossorigin>
@@ -158,7 +158,7 @@
                 "name": "Zajišťujete sezónní výzdobu hrobů?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ano. Nabízím sezónní výzdobu hrobů: jarní, letní, dušičkovou i vánoční. Květiny a dekorace zajistím nebo použiji podle přání rodiny."
+                    "text": "Ano. Nabízím sezónní výzdobu hrobů: jarní, letní, podzimní i vánoční. Květiny a dekorace zajistím nebo použiji podle přání rodiny."
                 }
             }
         ]
@@ -191,8 +191,8 @@
             --color-green-dark: #5C6B5E;
             --color-gold: #6B7B6E;
             --color-black: #2D2D2D;
-            --font-custom: "MujFont", "Cormorant Garamond", serif;
-            --font-serif: 'Cormorant Garamond', serif;
+            --font-custom: "MujFont", sans-serif;
+            --font-heading: var(--font-custom);
             --font-sans: 'Inter', sans-serif;
 
             --spacing-xs: clamp(0.5rem, 1vw, 0.75rem);
@@ -517,7 +517,7 @@
         }
 
         .sluzba-title {
-            font-family: var(--font-serif);
+            font-family: var(--font-heading);
             font-size: var(--text-lg);
             font-weight: 600;
             color: var(--color-green);
@@ -633,7 +633,7 @@
         }
 
         .pricing-name {
-            font-family: var(--font-serif);
+            font-family: var(--font-heading);
             font-size: var(--text-xl);
             font-weight: 600;
             color: var(--color-green);
@@ -1103,59 +1103,6 @@
             cursor: pointer;
         }
 
-        .dusicky-banner {
-            background-color: #EEF0EA;
-            padding: var(--spacing-lg) 0;
-            border-bottom: 1px solid rgba(107, 123, 110, 0.18);
-        }
-
-        .dusicky-banner-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: var(--spacing-md) var(--spacing-xl);
-            flex-wrap: wrap;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .dusicky-banner-kicker {
-            display: block;
-            font-family: var(--font-custom);
-            font-size: var(--text-sm);
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: #86673F;
-            margin-bottom: 4px;
-        }
-
-        .dusicky-banner-title {
-            font-family: var(--font-serif);
-            font-size: var(--text-xl);
-            font-weight: 600;
-            line-height: 1.2;
-            color: #3F4B42;
-        }
-
-        .dusicky-banner-text {
-            font-size: var(--text-sm);
-            color: var(--color-dark-gray);
-            margin-top: 4px;
-        }
-
-        .dusicky-banner .cta-button {
-            white-space: nowrap;
-            background-color: var(--color-green-dark);
-        }
-
-        @media (max-width: 600px) {
-            .dusicky-banner .cta-button {
-                width: 100%;
-                text-align: center;
-                white-space: normal;
-            }
-        }
-
         .mobile-menu-wrapper {
             position: fixed;
             top: 80px;
@@ -1242,6 +1189,7 @@
         }
     </style>
 
+    <link rel="stylesheet" href="modernizace.css">
 </head>
 
 <body>
@@ -1258,82 +1206,52 @@
                 </a>
 
                 <nav class="nav nav-right">
-                    <a href="../dusicky/" class="nav-link">Dušičky</a>
+                    <a href="#galerie" class="nav-link">Ukázky práce</a>
                     <a href="../" class="nav-link">Další služby</a>
                     <a href="#kontakt" class="nav-link">Kontakt</a>
                 </nav>
 
-                <button class="nav-toggle" aria-label="Toggle navigation">
+                <button class="nav-toggle" aria-label="Otevřít nabídku" aria-expanded="false" aria-controls="mobile-menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
             </div>
         </div>
-        <div class="mobile-menu-wrapper">
+        <div class="mobile-menu-wrapper" id="mobile-menu">
             <a href="#home" class="nav-link">Domů</a>
             <a href="#cenik" class="nav-link">Ceník</a>
-            <a href="../dusicky/" class="nav-link">Dušičky 2026</a>
-            <a href="../" class="nav-link">Další služby</a>
+            <a href="#galerie" class="nav-link">Ukázky práce</a>
+                    <a href="../" class="nav-link">Další služby</a>
             <a href="#kontakt" class="nav-link">Kontakt</a>
         </div>
     </header>
 
     <main>
         <section id="home" class="hero">
-            <div class="hero-image">
-                <img src="../images/22149125626.webp" alt="Údržba hrobů Mělník - profesionální péče o hroby" width="2000"
-                    height="1333">
-            </div>
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h1 class="hero-title">Péče o&nbsp;hroby Mělník – údržba a&nbsp;výzdoba</h1>
-                <p class="hero-subtitle">Když nemůžete vy, postarám se já. Správa hrobů na dálku s fotodokumentací.</p>
-                <a href="#kontakt" class="cta-button">Nezávazně poptat</a>
-            </div>
-        </section>
-
-        <section class="dusicky-banner" aria-label="Dušičková péče o hroby 2026">
-            <div class="container">
-                <div class="dusicky-banner-inner">
-                    <div>
-                        <span class="dusicky-banner-kicker">Dušičky 2026 · omezená kapacita</span>
-                        <p class="dusicky-banner-title">Připravím hrob vašich blízkých na&nbsp;Dušičky.</p>
-                        <p class="dusicky-banner-text">Úklid, dušičková výzdoba a&nbsp;fotografie po dokončení. Letos přijmu jen 10 objednávek.</p>
+            <div class="container hero-layout">
+                <div class="hero-content">
+                    <h1 class="hero-title">Péče o hroby<br>Mělník a okolí</h1>
+                    <p class="hero-subtitle">Když jste daleko nebo už nemáte sílu, postarám se já. Hrob uklidím, upravím a pošlu vám fotografie. Jednorázově i pravidelně po celý rok.</p>
+                    <div class="hero-actions">
+                        <a href="#kontakt" class="cta-button">Chci nezávaznou nabídku <span aria-hidden="true">→</span></a>
+                        <a href="tel:+420736231196" class="phone-link">Zavolat 736 231 196</a>
                     </div>
-                    <a href="../dusicky/" class="cta-button">Dušičková péče →</a>
+                    <p class="hero-reassurance">Péče od 490 Kč · Cenu i rozsah si odsouhlasíme předem.</p>
+                    <a href="#galerie" class="text-link">Prohlédnout výsledky před a po <span aria-hidden="true">↗</span></a>
                 </div>
+                <figure class="hero-photo">
+                    <img src="../images/22149125626.webp" alt="Položení květinové výzdoby na hrob" width="2000" height="1333" fetchpriority="high">
+                </figure>
             </div>
         </section>
-
-        <section id="aktuality" class="aktuality">
+        <div class="care-promises">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Aktuality</h2>
-                    <p class="section-subtitle">Co jsem v poslední době udělala</p>
-                </div>
-
-                <div class="aktuality-grid" id="aktuality-grid">
-                </div>
-
-                <div class="aktuality-link-wrapper">
-                    <a href="https://share.google/n45p277SsljatlpIV" target="_blank" rel="noopener"
-                        class="aktuality-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                            <path
-                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                            <path
-                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-                            <path
-                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
-                        </svg>
-                        Více příspěvků na Google
-                    </a>
-                </div>
+                <span>Fotografie před a po každé péči</span>
+                <span>Jednorázově i pravidelně</span>
+                <span>Domluva na dálku</span>
             </div>
-        </section>
+        </div>
 
         <section id="sluzby" class="sluzby-kompakt">
             <div class="container">
@@ -1365,23 +1283,23 @@
                         <div class="proces-cislo">1</div>
                         <div class="proces-text">
                             <strong>Poptáte službu</strong>
-                            Zadáte lokalitu hřbitova a typ péče.
+                            Stačí napsat hřbitov a s čím potřebujete pomoci.
                         </div>
                     </div>
                     <div class="proces-sipka">→</div>
                     <div class="proces-krok">
                         <div class="proces-cislo">2</div>
                         <div class="proces-text">
-                            <strong>Já se postarám</strong>
-                            Provedu vše s péčí a úctou.
+                            <strong>Domluvíme cenu a péči</strong>
+                            Předem si potvrdíme rozsah, cenu i termín.
                         </div>
                     </div>
                     <div class="proces-sipka">→</div>
                     <div class="proces-krok">
                         <div class="proces-cislo">3</div>
                         <div class="proces-text">
-                            <strong>Dostanete fotky</strong>
-                            Fotodokumentace před a po úklidu.
+                            <strong>Postarám se a pošlu fotky</strong>
+                            Uvidíte výsledek, i když jste daleko.
                         </div>
                     </div>
                 </div>
@@ -1392,14 +1310,15 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Ceník služeb</h2>
-                    <p class="section-subtitle">Vyberte si balíček a četnost návštěv</p>
+                    <p class="section-subtitle">Jedna návštěva, nebo pravidelná péče. Konečnou cenu si potvrdíme předem.</p>
                 </div>
 
                 <div class="pricing-grid">
                     <div class="pricing-card" data-package="standard">
                         <h3 class="pricing-name">Standardní péče</h3>
+                        <p class="package-description">Pro průběžně udržovaný hrob, který potřebuje osvěžit.</p>
                         <div class="pricing-price-box">
-                            <div class="pricing-price">490 Kč</div>
+                            <div class="pricing-price" aria-live="polite">od 490 Kč</div>
                             <div class="pricing-period">jednorázově</div>
                         </div>
                         <ul class="pricing-features">
@@ -1426,8 +1345,9 @@
                     <div class="pricing-card featured" data-package="general">
                         <span class="pricing-badge">Doporučuji</span>
                         <h3 class="pricing-name">Generální úklid</h3>
+                        <p class="package-description">Když je potřeba důkladnější očista a úprava hrobového místa.</p>
                         <div class="pricing-price-box">
-                            <div class="pricing-price">990 Kč</div>
+                            <div class="pricing-price" aria-live="polite">od 990 Kč</div>
                             <div class="pricing-period">jednorázově</div>
                         </div>
                         <ul class="pricing-features">
@@ -1455,8 +1375,9 @@
 
                     <div class="pricing-card" data-package="decoration">
                         <h3 class="pricing-name">Péče s výzdobou</h3>
+                        <p class="package-description">Když chcete kromě úklidu i květiny a osobní vzpomínku.</p>
                         <div class="pricing-price-box">
-                            <div class="pricing-price">990 Kč</div>
+                            <div class="pricing-price" aria-live="polite">od 990 Kč</div>
                             <div class="pricing-period">jednorázově</div>
                         </div>
                         <ul class="pricing-features">
@@ -1483,6 +1404,7 @@
                     </div>
                 </div>
 
+                <p class="package-help">Nevíte, jakou péči vybrat? <a href="#kontakt">Napište mi, ráda poradím.</a></p>
                 <div class="pricing-note-unified">
                     Všechny ceny jsou orientační a závisí na rozsahu prací, stavu hrobu a lokalitě. Ceny platí pro hřbitovy v okolí Mělníka, u vzdálenějších lokalit může být účtován příplatek za dopravu. Přesnou cenu vám ráda sdělím po nezávazné poptávce.
                 </div>
@@ -1515,6 +1437,35 @@
                             <span class="gallery-label-service">Generální úklid</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="aktuality" class="aktuality">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Z posledních realizací</h2>
+                    <p class="section-subtitle">Ukázky dokončené péče o hroby</p>
+                </div>
+
+                <div class="aktuality-grid" id="aktuality-grid">
+                </div>
+
+                <div class="aktuality-link-wrapper">
+                    <a href="https://share.google/n45p277SsljatlpIV" target="_blank" rel="noopener"
+                        class="aktuality-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                            <path
+                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                            <path
+                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                            <path
+                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                        </svg>
+                        Více příspěvků na Google
+                    </a>
                 </div>
             </div>
         </section>
@@ -1553,27 +1504,57 @@
             </div>
         </section>
 
+        <section class="care-faq" id="otazky">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Na co se často ptáte</h2>
+                </div>
+                <div class="faq-list">
+                    <details><summary>Kolik stojí péče o hrob na Mělníku?</summary><p>Standardní péče o hrob stojí od 490 Kč jednorázově. Generální úklid hrobu od 990 Kč. Při ročním předplatném (4× ročně) je cena výhodnější.</p></details>
+                    <details><summary>Nabízíte správu hrobů na dálku?</summary><p>Ano. Nabízím správu hrobů na dálku pro rodiny, které žijí daleko od Mělníka. Po každé návštěvě posílám fotodokumentaci před a po údržbě.</p></details>
+                    <details><summary>Na kterých hřbitovech působíte?</summary><p>Působím na hřbitovech na Mělníku a v okolí: Veltrusy, Byšice, Dolní Beřkovice, Neratovice, Mšeno. U vzdálenějších lokalit může být účtován příplatek za dopravu.</p></details>
+                    <details><summary>Co zahrnuje údržba hrobu?</summary><p>Údržba hrobu zahrnuje čištění náhrobku, úpravu okolí hrobu, odstranění plevele, zapálení svíčky a fotodokumentaci. Při generálním úklidu provádím hloubkové čištění speciálními prostředky.</p></details>
+                    <details><summary>Zajišťujete sezónní výzdobu hrobů?</summary><p>Ano. Nabízím sezónní výzdobu hrobů: jarní, letní, podzimní i vánoční. Květiny a dekorace zajistím nebo použiji podle přání rodiny.</p></details>
+                </div>
+            </div>
+        </section>
+
         <section id="kontakt" class="contact">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Kontaktujte mě</h2>
-                    <p class="section-subtitle">Ráda vám připravím nabídku na míru</p>
+                    <h2 class="section-title">Domluvme péči o hrob</h2>
+                    <p class="section-subtitle">Stačí mi pár údajů. Ozvu se vám a společně domluvíme péči i cenu. Poptávka je nezávazná.</p>
                 </div>
 
+                <div class="contact-layout">
+                    <aside class="contact-person">
+                        <img src="../images/zaneta-foto.webp" alt="Žaneta z Pro Váš Klid" width="160" height="160" loading="lazy">
+                        <h3>Jsem Žaneta.</h3>
+                        <p>Vím, že za každým hrobem je něčí příběh. K péči proto přistupuji s respektem a podle přání vaší rodiny.</p>
+                        <p>Nemusíte znát název balíčku. Napište mi, kde se hrob nachází a co potřebujete. S výběrem vám pomohu.</p>
+                        <a href="tel:+420736231196" class="contact-phone">736 231 196</a>
+                        <a href="mailto:info@provasklid.cz">info@provasklid.cz</a>
+                    </aside>
                 <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvgdgbrp" method="POST"
                     novalidate>
+                    <input type="hidden" name="_subject" value="Péče o hroby – nezávazná poptávka">
+                    <input type="hidden" name="stranka" value="provasklid.cz/pece-o-hroby-melnik/">
                     <div class="form-group">
                         <label for="name">Jméno *</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
                         <span class="error-message">Prosím, vyplňte vaše jméno</span>
                     </div>
 
                     <div class="form-group">
                         <label for="email">E-mail *</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
                         <span class="error-message">Prosím, zadejte platnou e-mailovou adresu</span>
                     </div>
 
+                    <div class="form-group">
+                        <label for="phone">Telefon (nepovinné)</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="Pokud si raději zavoláte">
+                    </div>
                     <div class="form-group">
                         <label for="location">Lokalita hřbitova *</label>
                         <input type="text" id="location" name="location" placeholder="např. Mělník, hřbitov u nemocnice"
@@ -1582,23 +1563,26 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="selected-package">Vybraný balíček</label>
-                        <input type="text" id="selected-package" name="selected-package" readonly
-                            placeholder="Vyberte balíček výše v ceníku">
+                        <label for="selected-package">Vybraný balíček (nepovinné)</label>
+                        <input type="text" id="selected-package" name="selected-package"
+                            placeholder="Nevím, potřebuji poradit">
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Poznámka</label>
+                        <label for="message">S čím vám mohu pomoci? (nepovinné)</label>
                         <textarea id="message" name="message"
                             placeholder="Typ hrobu, speciální požadavky, preferovaný termín..."></textarea>
                     </div>
 
-                    <button type="submit" class="submit-button">Odeslat poptávku</button>
+                    <p class="form-note">Odesláním formuláře požádáte o nabídku. Službu domluvíme až po vašem potvrzení. Jak nakládám s údaji, najdete v <a href="../ochrana-osobnich-udaju.html">ochraně osobních údajů</a>.</p>
+                    <button type="submit" class="submit-button">Chci nezávaznou nabídku</button>
+                    <p id="formError" class="form-error" role="alert" hidden>Odeslání se nepodařilo. Zkuste to znovu nebo mi zavolejte na <a href="tel:+420736231196">736 231 196</a>. Vyplněné údaje zůstaly zachované.</p>
 
-                    <div class="form-success" id="formSuccess">
+                    <div class="form-success" id="formSuccess" role="status">
                         <p>✓ Děkuji za vaši poptávku! Brzy se vám ozvu.</p>
                     </div>
                 </form>
+                </div>
             </div>
         </section>
     </main>
@@ -1618,7 +1602,6 @@
                         <a href="#sluzby">Služby</a>
                         <a href="#cenik">Ceník</a>
                         <a href="#kontakt">Kontakt</a>
-                        <a href="../dusicky/">Dušičková péče o hroby 2026</a>
                         <a href="../hrbitov-melnik/">Hřbitov sv. Václava Mělník</a>
                         <a href="../">Pro Váš Klid - Hlavní stránka</a>
                     </nav>
@@ -1633,7 +1616,7 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2026 Pro Váš Klid - Péče o hroby. Všechna práva vyhrazena. | <a
-                        href="ochrana-osobnich-udaju.html">GDPR</a> | <a href="podminky.html">Podmínky</a></p>
+                        href="../ochrana-osobnich-udaju.html">GDPR</a> | <a href="../podminky.html">Podmínky</a></p>
             </div>
         </div>
     </footer>
@@ -1645,7 +1628,7 @@
         </div>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         async function loadAktuality() {
             try {
                 const response = await fetch('../data/aktuality.json');
@@ -1653,7 +1636,7 @@
 
                 const grid = document.getElementById('aktuality-grid');
 
-                const posledni3 = aktuality.slice(0, 3);
+                const posledni3 = [...aktuality].sort((a, b) => new Date(b.datum) - new Date(a.datum)).slice(0, 3);
 
                 posledni3.forEach(item => {
                     const card = document.createElement('div');
@@ -1690,6 +1673,7 @@
 
         navToggle?.addEventListener('click', () => {
             navToggle.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', String(navToggle.classList.contains('active')));
             mobileMenu.classList.toggle('active');
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         });
@@ -1697,6 +1681,7 @@
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
                 mobileMenu.classList.remove('active');
                 document.body.style.overflow = '';
             });
@@ -1710,7 +1695,7 @@
                     const headerOffset = 80;
                     const elementPosition = target.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    window.scrollTo({ top: offsetPosition, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
                 }
             });
         });
@@ -1718,13 +1703,21 @@
         const contactForm = document.getElementById('contactForm');
         const formSuccess = document.getElementById('formSuccess');
 
+        const cemeteryField = document.getElementById('location');
+        const cemeterySource = new URLSearchParams(window.location.search).get('hrbitov');
+        if (cemeterySource === 'sv-vaclav-melnik' && !cemeteryField.value.trim()) {
+            cemeteryField.value = 'Mělník, hřbitov sv. Václava';
+        }
+
         function validateField(field) {
             const formGroup = field.closest('.form-group');
             const value = field.value.trim();
             formGroup.classList.remove('error');
+            field.setAttribute('aria-invalid', 'false');
 
             if (field.hasAttribute('required') && !value) {
                 formGroup.classList.add('error');
+                field.setAttribute('aria-invalid', 'true');
                 return false;
             }
 
@@ -1732,6 +1725,7 @@
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailPattern.test(value)) {
                     formGroup.classList.add('error');
+                    field.setAttribute('aria-invalid', 'true');
                     return false;
                 }
             }
@@ -1743,6 +1737,7 @@
             field.addEventListener('blur', () => validateField(field));
             field.addEventListener('input', () => {
                 field.closest('.form-group').classList.remove('error');
+                field.setAttribute('aria-invalid', 'false');
             });
         });
 
@@ -1752,6 +1747,10 @@
             formFields.forEach(field => {
                 if (!validateField(field)) isValid = false;
             });
+
+            formSuccess.classList.remove('show');
+            document.getElementById('formError').hidden = true;
+            if (!isValid) contactForm.querySelector('.form-group.error input')?.focus();
 
             if (isValid) {
                 const submitButton = contactForm.querySelector('.submit-button');
@@ -1770,12 +1769,11 @@
                     if (response.ok) {
                         formSuccess.classList.add('show');
                         contactForm.reset();
-                        setTimeout(() => formSuccess.classList.remove('show'), 5000);
                     } else {
-                        alert('Něco se pokazilo. Zkuste to prosím znovu.');
+                        document.getElementById('formError').hidden = false;
                     }
                 } catch (error) {
-                    alert('Chyba při odesílání. Zkontrolujte připojení.');
+                    document.getElementById('formError').hidden = false;
                 }
                 submitButton.textContent = originalText;
                 submitButton.disabled = false;
@@ -1783,7 +1781,7 @@
         });
 
         const frequencyDetails = {
-            'annual-4': { info: '4× ročně: Jaro, Léto, Dušičky, Vánoce', savings: true },
+            'annual-4': { info: '4× ročně: jaro, léto, podzim, zima', savings: true },
             'annual-2': { info: '2× ročně: Jaro (po zimě), Podzim (před zimou)', savings: true },
             'once': { info: '', savings: false }
         };
@@ -1802,7 +1800,7 @@
 
                 priceElement.style.transform = 'scale(1.1)';
                 setTimeout(() => {
-                    priceElement.textContent = price + ' Kč';
+                    priceElement.textContent = 'od ' + price + ' Kč';
                     priceElement.style.transform = 'scale(1)';
                 }, 150);
 
@@ -1842,7 +1840,7 @@
             const elementPosition = contactSection.getBoundingClientRect().top;
             window.scrollTo({
                 top: elementPosition + window.pageYOffset - headerOffset,
-                behavior: 'smooth'
+                behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
             });
         }
 
@@ -1860,22 +1858,6 @@
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeLightbox();
-        });
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.sluzba-item, .pricing-card, .testimonial-card, .aktuality-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
         });
 
         window.addEventListener('load', function () {

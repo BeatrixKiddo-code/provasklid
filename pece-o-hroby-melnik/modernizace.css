@@ -1,0 +1,83 @@
+/* Targeted refresh using the existing Pro Váš Klid palette and assets. */
+:root { --color-green: #526455; --color-green-dark: #3e5142; }
+html { scroll-padding-top: 105px; }
+body { text-wrap: pretty; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--color-green); outline-offset: 5px; }
+.hero { min-height: auto; padding: 140px 0 56px; }
+.hero-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(30px, 5vw, 76px); align-items: center; }
+.hero-content { padding: 0; text-align: left; color: var(--color-black); max-width: none; }
+.hero-title { font-family: var(--font-heading); font-size: clamp(42px, 4.8vw, 68px); font-weight: 400; font-synthesis: none; text-transform: uppercase; line-height: 1.15; letter-spacing: .025em; text-shadow: none; margin-bottom: 28px; }
+.hero-subtitle { font-size: 17px; font-weight: 400; color: #595d57; text-shadow: none; max-width: 520px; margin-bottom: 26px; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 18px 24px; }
+.hero .cta-button { padding: 17px 24px; font-size: 15px; border-radius: 6px; box-shadow: none; }
+.hero .cta-button span { margin-left: 15px; }
+.phone-link, .text-link { color: var(--color-green-dark); font-size: 14px; text-underline-offset: 5px; }
+.hero-reassurance { font-size: 13px; color: #595d57; margin: 18px 0 24px; }
+.hero-photo { margin: 0; height: 480px; overflow: hidden; border-radius: 4px; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+.care-promises { border-block: 1px solid #dce1d9; background: #eef0ea; }
+.care-promises .container { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-block: 22px; font-size: 14px; color: var(--color-green-dark); }
+.care-promises span::before { content: '✓'; margin-right: 10px; }
+.section-title { text-transform: uppercase; font-family: var(--font-heading); font-size: clamp(30px, 3.4vw, 42px); font-weight: 400; font-synthesis: none; line-height: 1.2; letter-spacing: .035em; }
+.sluzba-title, .pricing-name { font-family: var(--font-heading); font-size: clamp(25px, 2.4vw, 30px); font-weight: 400; font-synthesis: none; line-height: 1.25; }
+.sluzba-item { background: transparent; border: 0; border-right: 1px solid #dce1d9; border-radius: 0; padding: 12px 24px; }
+.sluzba-item:last-child { border-right: 0; }
+.sluzba-item:hover { transform: none; border-color: #dce1d9; }
+.proces-kompakt { border-radius: 12px; }
+.aktuality-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 360px)); justify-content: center; }
+.pricing-card { background: #fff; padding: 30px 24px; }
+.pricing-card.featured { background: #edf0e9; }
+.pricing-name { color: var(--color-green-dark); }
+.package-description { text-align: center; font-size: 14px; color: #595d57; min-height: 48px; margin-bottom: 18px; }
+.pricing-price { font-variant-numeric: tabular-nums; }
+.pricing-button { min-height: 48px; }
+.package-help { text-align: center; margin: 30px 0 0; }
+.package-help a, .form-note a, .care-faq a { color: var(--color-green-dark); text-underline-offset: 3px; }
+.care-faq { padding: var(--spacing-section) 0; }
+.faq-list { max-width: 840px; margin: 0 auto; }
+.faq-list details { border-bottom: 1px solid #dce1d9; padding: 22px 0; }
+.faq-list summary { cursor: pointer; font-size: 17px; font-weight: 500; color: var(--color-green-dark); padding-right: 20px; }
+.faq-list p { padding-top: 14px; color: #595d57; max-width: 740px; }
+.contact-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(32px, 6vw, 85px); max-width: 1060px; margin: 0 auto; align-items: start; }
+.contact-person { padding-top: 14px; }
+.contact-person img { width: 110px; height: 110px; object-fit: cover; object-position: center 25%; border-radius: 50%; margin-bottom: 24px; }
+.contact-person h3 { font-family: var(--font-heading); color: var(--color-green-dark); font-size: 34px; font-weight: 400; font-synthesis: none; line-height: 1.2; margin-bottom: 20px; }
+.contact-person p { color: #595d57; margin-bottom: 20px; }
+.contact-person a { display: block; color: var(--color-green-dark); text-underline-offset: 4px; }
+.contact-phone { font-size: 26px; margin-top: 30px; margin-bottom: 8px; }
+.contact-form { width: 100%; margin: 0; padding: clamp(22px, 3vw, 38px); border: 1px solid #e1e5de; border-radius: 12px; box-shadow: none; }
+.form-group input, .form-group textarea { font-size: 16px; min-height: 48px; }
+.form-group input[aria-invalid="true"] { border-color: #a3332b; }
+.form-note { font-size: 12px; color: #595d57; margin-bottom: 20px; }
+.submit-button { font-size: 16px; min-height: 52px; }
+.submit-button:disabled { opacity: .65; cursor: wait; }
+.form-error { margin-top: 20px; color: #a3332b; }
+.form-error a { color: inherit; }
+.nav-link { font-size: 15px; }
+@media (max-width: 1100px) {
+    .nav { gap: 18px; }
+    .hero-layout { gap: 28px; }
+    .hero-photo { height: 440px; }
+}
+@media (max-width: 760px) {
+    .hero { padding: 115px 0 32px; }
+    .hero-layout, .contact-layout { grid-template-columns: 1fr; }
+    .hero-content { max-width: 580px; }
+    .hero-title { font-size: clamp(38px, 7.3vw, 54px); }
+    .hero-photo { height: 310px; }
+    .sluzba-item { border-right: 0; padding: 20px 0; }
+    .care-promises .container { flex-direction: column; gap: 10px; padding-block: 20px; }
+    .contact-person { max-width: 540px; }
+    .contact-phone { margin-top: 20px; }
+    .package-description { min-height: 0; }
+}
+@media (max-width: 420px) {
+    .container { width: calc(100% - 24px); padding-inline: 8px; }
+    .hero-actions { align-items: stretch; flex-direction: column; }
+    .hero .cta-button, .phone-link { text-align: center; }
+    .phone-link { padding: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+}
